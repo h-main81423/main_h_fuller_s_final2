@@ -1,0 +1,468 @@
+@charset "UTF-8";
+/*CSS Doc*/
+
+.hidden
+{
+	display: none;
+}
+
+.divider
+{
+	width: 1400px;
+	height: 25px;
+	background: #999;
+}
+
+#siteContainer
+{
+	margin: 0 auto;
+	width: 1400px;
+	height: auto;
+	text-decoration: none;
+	background: #d7d7d7;
+	font-family: Arial;
+}
+
+#mainNav {
+	height: 175px;
+	width: 1400px;
+	background: #898989;
+	display: flex;
+}
+
+#logoContainer {
+	width: 150px;
+	height: 150px;
+	margin-top: 10px;
+	margin-left: 25px;
+	background: #252525
+}
+
+#mainNav ul{
+	display: flex;
+	height: 175px;
+	margin-top: 75px;
+}
+
+#mainNav ul li {
+	font-family: Arial;
+	font-size: 24px;
+	color: #000;
+	margin-left: 15px;
+}
+
+#Sbutton{
+	background: #333;
+	padding-top:5px;
+	border-radius: 10px;
+	width: 90px;
+	height: 30px;
+}
+
+#mainNav ul li a {
+	text-decoration: none;
+	flex-direction: row;
+	padding: 5px;
+	border-radius: 10px;
+	color: #000;
+}
+
+#mainNav ul li a:hover {
+	background-color: #999;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+#heroContainer
+{
+	height: 500px;
+	background: #999;
+}
+
+#heroImg
+{
+	height: 400px;
+	background: #333;
+}
+
+#heroSlogan1
+{
+	font-size: 36px;
+	font-family: Arial;
+	color: #FFF;
+	position: relative;
+	top: 8px;
+	left: 20px;
+}
+
+#heroSlogan2
+{
+	font-size: 36px;
+	font-family: Arial;
+	color: #FFF;
+	position: relative;
+	margin-top: 0;
+	top: 320px;
+	left: 880px;
+}
+
+
+#heroText
+{
+	margin-left: 25px;
+	margin-right: 25px;
+	text-align: center;
+	padding-top: 50px;
+	font-family: Arial;
+	height: 100px;
+	background: #999;
+	font-size: 30px;
+}
+
+#memberships
+{
+	width: 1400px;
+	height: 300px;
+	background: #d7d7d7;
+	display: flex;
+}
+
+#membershipImg {
+	margin-left: 25px;
+	width: 150px;
+	height: 300px;
+	background: #333;
+}
+
+#membershipText
+{	
+	margin-left: 15px;
+	margin-top: 10px;
+	font-family: Arial;
+	font-size: 30px;
+	width: 1050px;
+}
+
+#membershipText h2
+{
+	font-size: 36px;
+}
+
+#membershipText p
+{
+	margin-top: 10px;
+	line-height: 45px;
+	text-indent: 20px;
+}
+
+#fundraiser
+{
+	width: 1050px;
+	height: 525px;
+	margin-left: 175px;
+	font-size: 30px;
+	padding-bottom: 10px;
+}
+
+#fundraiser p
+{
+	margin-top: 15px;
+	font-size: 24px;
+	text-align: center;
+}
+
+#fundraiserImgs
+{
+	width: 1050px;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 15px;
+}
+
+.fundraiserImg
+{
+	width: 300px;
+	height: 275px;
+	background: #333;
+}
+
+#fundraiserTitles
+{
+	width: 1050px;
+	font-size: 24px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.fundraiserTitle
+{
+	text-align: center;
+	width: 300px;
+}
+
+.title
+{
+	width: 1050px;
+	margin-left: 175px;
+	font-family: Arial;
+	font-size: 36px;
+}
+
+.title h2
+{
+	font-size: 36px;
+	font-weight: bold;
+	padding: 10px;
+}
+
+.subtitle
+{
+	width: 1050px;
+	margin-left: 175px;
+	font-family: Arial;
+}
+
+.subtitle h3
+{
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	padding: 10px;
+}
+
+.announcements
+{
+	width: 1050px;
+	padding: 10px;
+	margin-left: 175px;
+	font-family: Arial;
+	display: flex;
+}
+
+.announcement
+{	
+	width: 700px;
+	margin-left: 20px;
+	font-size: 22px;
+	line-height: 40px;
+	text-indent: 20px;
+}
+
+.announcement h2
+{
+	width: 1050px;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.announcementImg
+{
+	width: 300px;
+	height: 300px;
+	background: #333;
+	margin-top: 10px;
+}
+
+.businesses
+{
+	width: 1050px;
+	height: 300px;
+	display: flex;
+	margin-left: 175px;
+	padding: 10px;
+}
+
+.businessText
+{	
+	text-indent: 20px;
+	flex-direction: row;
+	width: 700px;
+	margin-left: 15px;
+	font-size: 22px;
+	line-height: 40px;
+}
+
+.businessesImg
+{
+	width: 300px;
+	height: 175px;
+	background: #333;
+	margin-top: 10px;
+}
+
+.executives
+{
+	width: 1050px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+.chairs
+{
+	width: 1050px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+.members {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.member {
+	flex-direction: column;
+	padding: 10px
+}
+
+.member h2
+{
+	font-weight: bold;
+}
+
+#about1{
+	width: 1050px;
+	background: #d7d7d7;
+	display: flex;
+	margin: 0 auto;
+}
+
+#about1 h1{
+	font-size: 36px;
+	padding: 10px;
+	display: flex;
+
+
+}
+
+#aboutImageCon{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+
+
+#imageA1{
+	height: 300px;
+	width: 505px;
+	background: #333;
+	margin-right: auto;
+
+
+}
+
+#imageA2{
+	height: 300px;
+	width: 505px;
+	background: #333;
+	margin-right: auto;
+}
+
+#aboutTop{
+	display: flex;
+	flex-direction: column;
+	margin-left: 50px;
+
+}
+
+.title2 {
+	font-size: 30px;
+	padding: 10px;
+	font-family: Arial;
+
+}
+
+#aboutTop p {
+	
+	line-height: 45px;
+	font-size: 24px;
+	
+
+}
+	
+#about2{
+	width: 1050px;
+	display: flex;
+	margin: 0 auto;
+	background-color: #d7d7d7;
+	height: 705px;
+
+}
+
+#about2ImageCon {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+
+
+}
+
+#about2Image {
+	height: 300px;
+	width: 505px;
+	background: #333;
+	margin-right: auto;
+}
+
+#about2Image2 {
+	height: 300px;
+	width: 505px;
+	background: #333;
+	margin-right: auto;
+}
+
+
+
+#about2TextCon {
+	display: flex;
+	flex-direction: column;
+	margin-left: 50px;
+	margin-top: 10px; 
+
+
+}
+
+#about2TextCon p {
+	font-size: 24px;
+	font-family: Arial;
+	margin-right: 50px;
+	line-height: 27px;
+}
+
+
+#footerNav {
+	height: 175px;
+	background: #898989;
+	display: flex;
+}
+
+#footerNav ul{
+	width: 1400px;
+	display: flex;
+	height: 175px;
+	margin-top: 75px;
+	margin-left: 75px;
+}
+
+#footerNav ul li {
+	font-family: Arial;
+	font-size: 24px;
+	color: #000;
+	margin-left: 15px;
+}
+
+#footerNav ul li a {
+	text-decoration: none;
+	flex-direction: row;
+	padding: 20px;
+	border-radius: 10px;
+	color: #000;
+}
+
+#footerNav ul li a:hover {
+	background-color: #999;
+	border-radius: 10px;
+	padding: 20px;
+}
+
