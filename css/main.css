@@ -526,8 +526,7 @@
 
 .member h2
 {
-	font-size: 24px;
-	font-weight: bold;
+	color-interpolation-filters: 
 }
 
 /*ABOUT US PAGE*/
@@ -937,3 +936,99 @@ input [ type=text ], select, textarea, #message
 {
 	position: relative;
 }
+
+
+/* Projects Page */
+
+#subtitleP h3
+{
+	font-size: 24px;
+	font-weight: bold;
+	padding: 10px;
+	text-align: center;
+}
+
+#projectsTop 
+{
+	margin: 0 auto;
+	width: 850px;
+	text-align: center;
+	font-size: 24px;
+
+
+}
+
+#projectsCon {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	width: 975px;
+	height: auto;
+	color: #5d7032;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e9ffd8+100 */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #e9ffd8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#e9ffd8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%,#e9ffd8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e9ffd8',GradientType=0 ); /* IE6-9 */
+	border-radius: 10px;
+	border: 1px #485725 dashed;
+}
+
+#projectsImageCon {
+	margin-left: 135px;
+}
+
+
+#projectsBottom{
+	margin-top: 25px;
+	margin-bottom: 25px;
+	width: 975px;
+	height: auto;
+	color: #5d7032;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e9ffd8+100 */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #e9ffd8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#e9ffd8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%,#e9ffd8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e9ffd8',GradientType=0 ); /* IE6-9 */
+	border-radius: 10px;
+	border: 1px #485725 dashed;
+}
+
+.projBottom
+{
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-around;
+	margin: 20px;
+	
+
+}
+
+#projBottom2 {
+	text-indent: 10px;
+	font-size: 24px;
+	line-height: 25px;
+	width: 450px;
+}
+
+#projBottom2 h4 {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#projBottom4{
+	text-indent: 10px;
+	font-size: 24px;
+	line-height: 25px;
+	width: 440px;
+
+}
+
+#projBottom4 h4 {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+
+
