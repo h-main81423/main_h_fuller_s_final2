@@ -633,3 +633,26 @@
 }
 
 
+/*PAST EVENTS*/
+
+#eventCon
+{
+	margin-top: 25px;
+	margin-bottom: 25px;
+	width: 975px;
+	height: auto;
+	color: #5d7032;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e9ffd8+100 */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #e9ffd8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#e9ffd8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%,#e9ffd8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e9ffd8',GradientType=0 ); /* IE6-9 */
+	border-radius: 10px;
+	border: 1px #485725 dashed;
+}
+
+.eventBox
+{
+
+}
