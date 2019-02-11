@@ -19,9 +19,9 @@
 .title
 {
 	width: 1050px;
-	margin-left: 175px;
 	font-family: Arial;
 	font-size: 36px;
+	margin-top: 5px; 
 }
 
 .title h1, h2
@@ -92,10 +92,15 @@
 }
 
 #Sbutton{
-	background: #333;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b2c584+0,cced87+100 */
+	background: #b2c584; /* Old browsers */
+    background: -moz-linear-gradient(top, #b2c584 0%, #cced87 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #b2c584 0%,#cced87 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #b2c584 0%,#cced87 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2c584', endColorstr='#cced87',GradientType=0 ); /* IE6-9 */
 	padding-top:5px;
 	border-radius: 10px;
-	width: 90px;
+	width: 80px;
 	height: 30px;
 }
 
@@ -121,26 +126,29 @@
 
 #memberships
 {
-	width: 1400px;
-	height: 300px;
-	background: #d7d7d7;
+	width: 975px;
+	height: 325px;
+	margin: 0 auto;
+	background: #bbd08b;
 	display: flex;
-}
-
-#membershipImg {
-	margin-left: 25px;
-	width: 150px;
-	height: 300px;
-	background: #333;
 }
 
 #membershipText
 {	
-	margin-left: 15px;
-	margin-top: 10px;
+	height: 275px;
 	font-family: Arial;
 	font-size: 30px;
-	width: 1050px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	color: #5d7032;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e9ffd8+100 */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #e9ffd8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#e9ffd8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%,#e9ffd8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e9ffd8',GradientType=0 ); /* IE6-9 */
+	border-radius: 10px;
+	border: 1px #485725 dashed;
 }
 
 #membershipText h2
@@ -150,18 +158,36 @@
 
 #membershipText p
 {
-	margin-top: 10px;
+	margin-left: 5px;
 	line-height: 45px;
 	text-indent: 20px;
+	text-align: left;
 }
 
 #fundraiser
 {
-	width: 1050px;
-	height: 525px;
+	width: 975px;
+	height: 575px;
 	margin-left: 175px;
 	font-size: 30px;
 	padding-bottom: 10px;
+	margin: 0 auto;
+	color: #5d7032;
+}
+
+#fundraiserBlurb
+{
+	height: 550px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e9ffd8+100 */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #e9ffd8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#e9ffd8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%,#e9ffd8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e9ffd8',GradientType=0 ); /* IE6-9 */
+	border-radius: 10px;
+	border: 1px #485725 dashed;
 }
 
 #fundraiser p
@@ -173,23 +199,25 @@
 
 #fundraiserImgs
 {
-	width: 1050px;
+	width: 850px;
 	display: flex;
 	justify-content: space-between;
-	margin-top: 15px;
+	padding-top: 15px;
+	margin: 0 auto;
 }
 
 .fundraiserImg
 {
-	width: 300px;
-	height: 275px;
+	width: 225px;
+	height: 175px;
 	background: #333;
 }
 
 #fundraiserTitles
 {
-	width: 1050px;
+	width: 850px;
 	font-size: 24px;
+	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
 }
@@ -197,7 +225,12 @@
 .fundraiserTitle
 {
 	text-align: center;
-	width: 300px;
+	width: 225px;
+}
+
+#fundraiserText
+{
+	width: 850px;
 }
 
 #footerNav {
@@ -235,16 +268,22 @@
 	padding: 20px;
 }
 
+/*INDEX PAGE*/
+
 #heroContainer
 {
 	height: 500px;
 	background: #999;
 }
 
-#heroImg
+.hero
 {
 	height: 400px;
-	background: #333;
+	background-image: linear-gradient(rgba(255, 255, 204, 0.13), rgba(0, 0, 0, 0)), url("../images/hero.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
 }
 
 #heroSlogan1
@@ -268,20 +307,33 @@
 	left: 880px;
 }
 
+#missionBG
+{
+	width: 975px;
+	height: 100px;
+	margin: 0 auto;
+	background-color: #bbd08b;
+}
 
 #heroText
 {
-	margin-left: 25px;
-	margin-right: 25px;
+	width: 975px;
+	height: 75px;
+	margin-top: 25px;
+	margin-bottom: 25px;
 	text-align: center;
-	padding-top: 50px;
 	font-family: Arial;
-	height: 100px;
-	background: #999;
 	font-size: 30px;
+	color: #5d7032;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e9ffd8+100 */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #e9ffd8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#e9ffd8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%,#e9ffd8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e9ffd8',GradientType=0 ); /* IE6-9 */
+	border-radius: 10px;
+	border: 1px #485725 dashed;
 }
-
-/*INDEX PAGE*/
 
 .announcements
 {
