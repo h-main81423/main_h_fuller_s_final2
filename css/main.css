@@ -532,106 +532,229 @@
 
 /*ABOUT US PAGE*/
 
+#about
+{
+	margin-top: 25px;
+	margin-bottom: 25px;
+	width: 975px;
+	height: auto;
+	color: #5d7032;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e9ffd8+100 */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #e9ffd8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#e9ffd8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%,#e9ffd8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e9ffd8',GradientType=0 ); /* IE6-9 */
+	border-radius: 10px;
+	border: 1px #485725 dashed;
+}
+
 #about1
 {
-	width: 1050px;
-	background: #d7d7d7;
+	width: 975px;
 	display: flex;
 	margin: 0 auto;
 }
 
-#aboutImageCon{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-}
-
-#imageA1
+#aboutImageCon
 {
-	height: 300px;
-	width: 505px;
-	background: #333;
-	margin-right: auto;
-}
-
-#imageA2{
-	height: 300px;
-	width: 505px;
-	background: #333;
-	margin-right: auto;
-}
-
-#aboutTop{
 	display: flex;
 	flex-direction: column;
-	margin-left: 50px;
-
+	justify-content: space-between;
+	margin-left: 30px; 
+	margin-bottom: 20px;
 }
 
-.title2 {
-	font-size: 30px;
-	padding: 10px;
-	font-family: Arial;
-
-}
-
-#aboutTop p {
-	
-	line-height: 45px;
-	font-size: 24px;
-	
-
-}
-	
-#about2{
-	width: 1050px;
+#about1TextCon
+{
 	display: flex;
-	margin: 0 auto;
-	background-color: #d7d7d7;
-	height: 705px;
-
+	flex-direction: column;
+	margin-left: 30px;
+	width: 400px;
+	margin-bottom: 20px;
 }
 
-#about2ImageCon {
+#about1TextCon p
+{
+	text-indent: 10px;
+	font-size: 24px;
+	line-height: 30px;
+}
+
+#subtitle p
+{
+	text-indent: 0px;
+	width: 450px;
+	font-size: 30px;
+	font-family: Arial;
+}
+
+	
+#about2
+{
+	color: #5d7032;
+	display: flex;
+	width: 975px;
+	height: auto;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e9ffd8+100 */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #e9ffd8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#e9ffd8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%,#e9ffd8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e9ffd8',GradientType=0 ); /* IE6-9 */
+	border-radius: 10px;
+	border: 1px #485725 dashed;
+}
+
+#about2ImageCon 
+{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-
-
+	margin-right: 20px;
 }
 
-#about2Image {
-	height: 300px;
-	width: 505px;
-	background: #333;
-	margin-right: auto;
-}
-
-#about2Image2 {
-	height: 300px;
-	width: 505px;
-	background: #333;
-	margin-right: auto;
-}
-
-
-
-#about2TextCon {
+#about2TextCon 
+{
 	display: flex;
 	flex-direction: column;
 	margin-left: 50px;
-	margin-top: 10px; 
-
-
+	margin-top: 10px;
+	margin-bottom: 20px; 
 }
 
-#about2TextCon p {
+#about2TextCon p 
+{
 	font-size: 24px;
 	font-family: Arial;
 	margin-right: 50px;
 	line-height: 27px;
 }
 
+
+/*CONTACT US PAGE*/
+
+#contactCon
+{
+	margin-top: 25px;
+	margin-bottom: 25px;
+	width: 975px;
+	height: auto;
+	color: #5d7032;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e9ffd8+100 */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #e9ffd8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#e9ffd8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%,#e9ffd8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e9ffd8',GradientType=0 ); /* IE6-9 */
+	border-radius: 10px;
+	border: 1px #485725 dashed;
+}
+
+#contactTop
+{
+	width: 975px;
+	display: flex;
+	margin: 0 auto;
+}
+
+#contImageCon
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-left: 30px; 
+	margin-bottom: 20px;
+}
+
+#cont1TextCon
+{
+	display: flex;
+	flex-direction: column;
+	margin-left: 30px;
+	width: 400px;
+	margin-bottom: 20px;
+}
+
+#cont1TextCon p
+{
+	font-size: 24px;
+	margin-top: 15px;
+	line-height: 30px;
+}
+
+#subtitle p
+{
+	text-indent: 0px;
+	width: 450px;
+	font-size: 30px;
+	font-family: Arial;
+}
+
+	
+#cont2
+{
+	color: #5d7032;
+	display: flex;
+	width: 975px;
+	height: auto;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e9ffd8+100 */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #e9ffd8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#e9ffd8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%,#e9ffd8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e9ffd8',GradientType=0 ); /* IE6-9 */
+	border-radius: 10px;
+	border: 1px #485725 dashed;
+}
+
+
+#cont2TextCon 
+{
+	display: flex;
+	flex-direction: column;
+	margin-left: 30px;
+	margin-top: 10px;
+	margin-bottom: 20px; 
+}
+
+#cont2TextCon p 
+{
+	font-size: 24px;
+	font-family: Arial;
+	margin-right: 50px;
+	line-height: 40px;
+}
+
+#contactForm
+{
+	margin-top: 150px;
+	margin-right: 20px;
+	height: 415px;
+	padding: 10px;
+	background-color: #d9bb9a;
+	color: #915d4a;
+}
+
+input[ type=text ], select, textarea
+{
+	width: 100%;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	resize: vertical;
+}
+
+input [ type=text ], select, textarea, #message
+{
+	padding-bottom: 125px;
+}
 
 /*PAST EVENTS*/
 
