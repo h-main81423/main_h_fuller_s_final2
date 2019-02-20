@@ -30,7 +30,7 @@ a
 	margin-top: 5px; 
 }
 
-.title h1, h2
+.title h1, h2, h3
 {
 	font-size: 36px;
 	font-weight: bold;
@@ -346,7 +346,7 @@ a
 	position: relative;
 }
 
-#heroArrows
+.heroArrows
 {
 	width: 1400px;
 }
@@ -357,7 +357,6 @@ a
 	position: relative;
 	font-size: 50px;
 	font-weight: bold;
-	margin-right: 0 auto;
 	margin-left: 10px;
 	top: 100px;
 }
@@ -741,7 +740,7 @@ a
 	line-height: 30px;
 }
 
-#subtitle p
+.subtitle1 p
 {
 	text-indent: 0px;
 	width: 450px;
@@ -856,7 +855,7 @@ input [ type=text ], select, textarea, #message
 	line-height: 35px;
 }
 
-#deal
+.deal
 {
 	font-weight: bold;
 	font-size: 24px;
@@ -1145,7 +1144,6 @@ input [ type=text ], select, textarea, #message
 
 .linkDesc
 {
-	margin-right: 0 auto;
 	margin-top: 10px;
 	padding: 10px;
 	line-height: 35px;
@@ -1402,7 +1400,7 @@ input [ type=text ], select, textarea, #message
 #dataImgs {
 	width: 960px;
 	display: flex;
-	flex-direction row;
+	flex-direction: row;
 	justify-content: space-evenly;
 	padding-top: 15px;
 	margin-top: 90px;
