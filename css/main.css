@@ -3,6 +3,11 @@
 
 
 /*UNIVERSAL CLASSES*/
+body
+{
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
 a
 {
 	text-decoration: none;
@@ -20,13 +25,36 @@ a
 	max-width: 1400px;
 	text-decoration: none;
 	background: #FFF;
-	font-family: Arial;
+	font-family: 'Noto Sans JP', sans-serif;
 }
 
 .subtitle
 {
 	width: auto;
-	font-family: Arial;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+.title
+{
+	font-family: 'Noto Sans JP', sans-serif;
+	color: #5d7032;
+}
+
+.title h1, h2, h3
+{
+	font-weight: bold;
+	padding: 10px;
+	line-height: 40px;
+}
+
+.subtitle h2
+{
+	font-weight: bold;
+}
+
+.subtitle h3
+{
+	font-weight: bold;
 }
 
 @media screen and (min-width: 960px) {
@@ -51,7 +79,7 @@ a
 
 .title
 {
-	font-family: Arial;
+	font-family: 'Noto Sans JP', sans-serif;
 	color: #5d7032;
 	font-size: 36px;
 	margin-top: 5px; 
@@ -109,7 +137,7 @@ a
 }
 
 #mainNav ul li {
-	font-family: Arial;
+	font-family: 'Noto Sans JP', sans-serif;
 	font-size: 16px;
 	color: #485725;
 	margin-left: 5px;
@@ -148,14 +176,14 @@ a
 	margin: 0 auto;
 	text-align: center;
 	margin-bottom: 10px;
-	font-family: Arial;
+	font-family: 'Noto Sans JP', sans-serif;
 }
 
 #membershipText
 {	
 	width: 960px;
 	height: 275px;
-	font-family: Arial;
+	font-family: 'Noto Sans JP', sans-serif;
 	font-size: 30px;
 	color: #5d7032;
 	margin: 0 auto;
@@ -183,13 +211,14 @@ a
 	padding: 20px;
 	margin: 0 auto;
 	color: #5d7032;
-	font-family: Arial;
+	font-family: 'Noto Sans JP', sans-serif;
 }
 
 #fundraiser p
 {
 	margin-top: 15px;
 	font-size: 24px;
+	line-height: 35px;
 	text-align: center;
 }
 
@@ -199,7 +228,7 @@ a
 	padding-top: 15px;
 	display: grid;
 	grid-template-columns: 225px 225px 225px;
-	grid-template-rows: 175;
+	grid-template-rows: 175px;
 	grid-column-gap: 100px;
 }
 
@@ -219,11 +248,13 @@ a
 .fundraiserTitle
 {
 	text-align: center;
+	line-height: 35px;
 }
 
 #fundraiserText
 {
 	width: 850px;
+	line-height: 35px;
 	margin: 0 auto;
 }
 
@@ -250,7 +281,7 @@ a
 
 #footerNav ul li 
 {
-	font-family: Arial;
+	font-family: 'Noto Sans JP', sans-serif;
 	font-size: 14px;
 	color: #5d7032;
 	margin-top: 15px;
@@ -312,8 +343,9 @@ a
 	margin-top: 25px;
 	margin-bottom: 25px;
 	text-align: center;
-	font-family: Arial;
+	font-family: 'Noto Sans JP', sans-serif;
 	font-size: 30px;
+	line-height: 35px;
 	color: #FFF;
 }
 
@@ -325,7 +357,8 @@ a
 	margin-top: 25px;
 	margin-bottom: 25px;
 	text-align: center;
-	font-family: Arial;
+	font-family: 'Noto Sans JP', sans-serif;
+	line-height: 35px;
 	font-size: 30px;
 	color: #5d7032;
 }
@@ -357,7 +390,7 @@ a
 	width: 940px;
 	padding: 10px;
 	margin-left: 30px;
-	font-family: Arial;
+	font-family: 'Noto Sans JP', sans-serif;
 	display: flex;
 }
 
@@ -366,7 +399,8 @@ a
 	margin-left: 40px;
 	width: 500px;
 	font-size: 22px;
-	line-height: 40px;
+	text-indent: 25px;
+	line-height: 35px;
 }
 
 .announcement h2
@@ -389,7 +423,7 @@ a
 	width: 960px;
 	height: auto;
 	color: #5d7032;
-	font-family: Arial;
+	font-family: 'Noto Sans JP', sans-serif;
 }
 
 .businesses
@@ -404,7 +438,7 @@ a
 	text-indent: 20px;
 	flex-direction: row;
 	font-size: 22px;
-	line-height: 40px;
+	line-height: 35px;
 }
 
 .businessesImg
@@ -420,7 +454,7 @@ a
 	min-width: 960px;
 	margin-top: 25px;
 	margin-bottom: 25px;
-	font-family: Arial;
+	font-family: 'Noto Sans JP', sans-serif;
 	display: grid;
 	grid-column: 5;
 	grid-row: 2;
@@ -476,32 +510,24 @@ a
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	margin-left: 30px; 
 	margin-bottom: 20px;
 }
 
 #about1TextCon
 {
 	display: flex;
+	padding: 10px;
 	flex-direction: column;
 	margin-left: 30px;
-	width: 400px;
 	margin-bottom: 20px;
 }
 
 #about1TextCon p
 {
-	text-indent: 10px;
 	font-size: 24px;
-	line-height: 30px;
-}
-
-#subtitle p
-{
-	text-indent: 0px;
-	width: 450px;
-	font-size: 30px;
-	font-family: Arial;
+	padding-left: 10px; 
+	margin-bottom: 20px;
+	line-height: 35px;
 }
 	
 #about2
@@ -526,7 +552,6 @@ a
 {
 	display: flex;
 	flex-direction: column;
-	margin-left: 50px;
 	margin-top: 10px;
 	margin-bottom: 20px; 
 }
@@ -534,9 +559,11 @@ a
 #about2TextCon p 
 {
 	font-size: 24px;
-	font-family: Arial;
-	margin-right: 50px;
-	line-height: 27px;
+	font-family: 'Noto Sans JP', sans-serif;
+	margin-right: 25px;
+	margin-bottom: 10px;
+	line-height: 35px;
+	text-indent: 25px;
 }
 
 
@@ -562,8 +589,6 @@ a
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	margin-left: 30px; 
-	margin-bottom: 20px;
 }
 
 #cont1TextCon
@@ -571,7 +596,6 @@ a
 	display: flex;
 	flex-direction: column;
 	margin-left: 30px;
-	width: 400px;
 	margin-bottom: 20px;
 }
 
@@ -579,7 +603,28 @@ a
 {
 	font-size: 24px;
 	margin-top: 15px;
-	line-height: 30px;
+	line-height: 35px;
+}
+
+.button
+{	
+	margin-top: 10px;
+	width: 175px;
+	height: 20px;
+	padding: 10px;
+	border-radius: 10px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b2c584+0,cced87+100 */
+	background: #b2c584; /* Old browsers */
+    background: -moz-linear-gradient(top, #b2c584 0%, #cced87 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #b2c584 0%,#cced87 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #b2c584 0%,#cced87 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2c584', endColorstr='#cced87',GradientType=0 ); /* IE6-9 */
+	box-shadow: 2px 1px 18px #a6b87b;
+}
+
+.button a
+{
+	color: #5d7032;
 }
 
 .subtitle1 p
@@ -587,7 +632,7 @@ a
 	text-indent: 0px;
 	width: 450px;
 	font-size: 30px;
-	font-family: Arial;
+	font-family: 'Noto Sans JP', sans-serif;
 }
 
 #cont2
@@ -615,14 +660,17 @@ a
 	margin-left: 30px;
 	margin-top: 10px;
 	margin-bottom: 10px; 
+	line-height: 35px;
 }
 
 #cont2TextCon p 
 {
 	font-size: 24px;
-	font-family: Arial;
+	font-family: 'Noto Sans JP', sans-serif;
 	margin-right: 50px;
-	line-height: 40px;
+	line-height: 35px;
+	text-indent: 25px;
+	margin-bottom: 10px;
 }
 
 input[ type=text ], input[ type=email ], select, textarea
@@ -665,20 +713,23 @@ input [ type=text ], select, textarea, #message
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	margin-left: 30px; 
 	margin-bottom: 20px;
 }
 
 #memTextCon
 {
-	width: 400px;
-	margin-left: 30px;
-	margin-top: 10px;
+	font-size: 24px;
+	padding-left: 30px;
 	margin-bottom: 20px;
 	line-height: 35px;
 }
 
-.deal
+#memTextCon p
+{
+	text-indent: 25px;
+}
+
+.deal h3
 {
 	font-weight: bold;
 	font-size: 24px;
@@ -747,14 +798,6 @@ input [ type=text ], select, textarea, #message
 	width: 975px;
 	height: auto;
 	color: #5d7032;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e9ffd8+100 */
-    background: #ffffff; /* Old browsers */
-    background: -moz-linear-gradient(top, #ffffff 0%, #e9ffd8 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #ffffff 0%,#e9ffd8 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #ffffff 0%,#e9ffd8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e9ffd8',GradientType=0 ); /* IE6-9 */
-	border-radius: 10px;
-	border: 1px #485725 dashed;
 }
 
 #newsletter
@@ -787,7 +830,7 @@ input [ type=text ], select, textarea, #message
 	text-indent: 0px;
 	width: 400px;
 	font-size: 30px;
-	font-family: Arial;
+	font-family: 'Noto Sans JP', sans-serif;
 }
 
 #newsletters
@@ -837,133 +880,6 @@ input [ type=text ], select, textarea, #message
 	padding: 20px;
 }
 
-/*links*/
-
-#links
-{
-	margin-top: 25px;
-	margin-bottom: 25px;
-	height: auto;
-	width: 975px;
-	color: #5d7032;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e9ffd8+100 */
-    background: #ffffff; /* Old browsers */
-    background: -moz-linear-gradient(top, #ffffff 0%, #e9ffd8 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #ffffff 0%,#e9ffd8 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #ffffff 0%,#e9ffd8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e9ffd8',GradientType=0 ); /* IE6-9 */
-	border-radius: 10px;
-	border: 1px #485725 dashed;
-}
-
-.links
-{
-	margin: 0 auto;
-	width: 975px;
-	height: auto;
-	display: flex;
-	flex-direction: column;
-}
-
-
-.links1
-{
-	margin-left: 10px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	height: auto;
-	font-size: 24px;
-	display: flex;
-	flex-direction: row;
-
-}
-
-.links2
-{
-	margin: 0 auto;
-	margin-bottom: 20px;
-	width: 850px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-}
-
-.links3
-{
-	margin: 0 auto;
-	margin-bottom: 20px;
-	display: flex;
-	flex-direction: column;
-}
-
-.linkB
-{
-	margin-top: 10px;
-	font-size: 24px;
-	box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
-	border-radius: 10px;
-	color: #5d7032;
-}
-
-.linkB a
-{
-	text-decoration: none;
-	margin-top: 10px;
-	color: #5d7032;
-}
-
-.linkB a:hover
-{
-	color: #FFF;
-}
-
-.buttonCon
-{
-	width: 200px;
-	height: auto;
-	text-align: center;
-	margin-top: 10px;
-}
-
-.button
-{
-	padding-left: 30px;
-	padding-right: 30px;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e6f9bc+0,bbcf8c+100 */
-    background: #e6f9bc; /* Old browsers */
-    background: -moz-linear-gradient(top, #e6f9bc 0%, #bbcf8c 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #e6f9bc 0%,#bbcf8c 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #e6f9bc 0%,#bbcf8c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6f9bc', endColorstr='#bbcf8c',GradientType=0 ); /* IE6-9 */
-}
-
-.button:hover
-{
-	color: #FFF;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e9d089+0,e2b07d+100 */
-    background: #e9d089; /* Old browsers */
-    background: -moz-linear-gradient(top, #e9d089 0%, #e2b07d 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #e9d089 0%,#e2b07d 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #e9d089 0%,#e2b07d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9d089', endColorstr='#e2b07d',GradientType=0 ); /* IE6-9 */
-}
-
-.linkDesc
-{
-	margin-top: 10px;
-	padding: 10px;
-	line-height: 35px;
-}
-
-#disclaimer 
-{
-	margin: 0 auto;
-	width: 850px;
-	font-size: 18px;
-	color: #5d7032;
-	padding: 10px;
-}
-
 /* Projects Page */
 
 #subtitleP h3
@@ -998,8 +914,7 @@ input [ type=text ], select, textarea, #message
 	padding: 10px; 
 }
 
-
-#projectsBottom{
+#projectsBottom {
 	margin-top: 25px;
 	margin-bottom: 25px;
 	width: 975px;
@@ -1012,7 +927,6 @@ input [ type=text ], select, textarea, #message
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: space-around;
-	margin: 20px;
 	padding: 10px; 
 }
 
@@ -1024,7 +938,6 @@ input [ type=text ], select, textarea, #message
 
 .projBottom2 
 {
-	margin-top: 10px;
 	font-size: 24px;
 	line-height: 35px;
 	width: 450px;
@@ -1033,6 +946,7 @@ input [ type=text ], select, textarea, #message
 .projBottom2 p
 {
 	text-indent: 20px;
+	margin-bottom: 20px;
 }
 
 
@@ -1043,6 +957,22 @@ input [ type=text ], select, textarea, #message
 	justify-content: space-around;
 	margin-left: 50px;
 	margin-bottom: 20px;
+}
+
+.projButton
+{	
+	font-size: 20px;
+	margin-bottom: 10px;
+	width: auto;
+	padding: 5px;
+	color: #5d7032;
+	background-color: #FFF;
+	border: 1px dashed #5d7032;
+}
+
+.projButton a
+{
+	color: #5d7032;
 }
 
 /*proj page template*/
@@ -1102,7 +1032,7 @@ input [ type=text ], select, textarea, #message
 	text-indent: 0px;
 	width: 450px;
 	font-size: 30px;
-	font-family: Arial;
+	font-family: 'Noto Sans JP', sans-serif;
 }
 
 	
@@ -1138,49 +1068,9 @@ input [ type=text ], select, textarea, #message
 .project2TextCon p 
 {
 	font-size: 24px;
-	font-family: Arial;
+	font-family: 'Noto Sans JP', sans-serif;
 	margin-right: 50px;
 	line-height: 27px;
-}
-
-#dataCon
-{
-	width: 975px;
-	height: 575px;
-	font-size: 30px;
-	padding-bottom: 10px;
-	margin: 0 auto;
-	color: #5d7032;
-}
-
-#dataBlurb
-{
-	height: 550px;
-	margin-top: 25px;
-	margin-bottom: 25px;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e9ffd8+100 */
-    background: #ffffff; /* Old browsers */
-    background: -moz-linear-gradient(top, #ffffff 0%, #e9ffd8 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #ffffff 0%,#e9ffd8 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #ffffff 0%,#e9ffd8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e9ffd8',GradientType=0 ); /* IE6-9 */
-	border-radius: 10px;
-	border: 1px #485725 dashed;
-}
-
-#dataImgs {
-	width: 960px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-	padding-top: 15px;
-	margin-top: 90px;
-}
-
-.dataImg
-{
-	width: 275px;
-	height: 206px;
 }
 
 } /*end web media query1*/
@@ -1227,7 +1117,6 @@ input [ type=text ], select, textarea, #message
 }
 
 #mainNav ul li {
-	font-family: Arial;
 	font-size: 18px;
 	color: #485725;
 	margin-left: 5px;
@@ -1264,7 +1153,7 @@ input [ type=text ], select, textarea, #message
 
 #footerNav ul li 
 {
-	font-family: Arial;
+	font-family: 'Noto Sans JP', sans-serif;
 	text-align: center;
 	font-size: 16px;
 	color: #5d7032;
@@ -1332,7 +1221,6 @@ input [ type=text ], select, textarea, #message
 }
 
 #mainNav ul li {
-	font-family: Arial;
 	font-size: 20px;
 	color: #485725;
 	margin-left: 15px;
@@ -1383,7 +1271,6 @@ input [ type=text ], select, textarea, #message
 
 #footerNav ul li 
 {
-	font-family: Arial;
 	font-size: 16px;
 	color: #5d7032;
 	margin-top: 15px;
@@ -1444,7 +1331,6 @@ input [ type=text ], select, textarea, #message
 }
 
 #mainNav ul li {
-	font-family: Arial;
 	font-size: 24px;
 	color: #485725;
 	margin-left: 10px;
@@ -1509,7 +1395,6 @@ input [ type=text ], select, textarea, #message
 
 #footerNav ul li 
 {
-	font-family: Arial;
 	font-size: 20px;
 	color: #5d7032;
 	margin-top: 15px;
@@ -1566,7 +1451,6 @@ input [ type=text ], select, textarea, #message
 	margin-top: 25px;
 	margin-bottom: 25px;
 	text-align: center;
-	font-family: Arial;
 	font-size: 30px;
 	color: #FFF;
 }
@@ -1579,7 +1463,6 @@ input [ type=text ], select, textarea, #message
 	margin-top: 25px;
 	margin-bottom: 25px;
 	text-align: center;
-	font-family: Arial;
 	font-size: 30px;
 	color: #5d7032;
 }
@@ -1605,7 +1488,6 @@ input [ type=text ], select, textarea, #message
 	width: 975px;
 	padding: 10px;
 	margin-left: 30px;
-	font-family: Arial;
 	display: flex;
 }
 
@@ -1637,7 +1519,6 @@ input [ type=text ], select, textarea, #message
 	width: 975px;
 	height: auto;
 	color: #5d7032;
-	font-family: Arial;
 }
 
 .businesses
@@ -1671,7 +1552,6 @@ input [ type=text ], select, textarea, #message
 	width: 1000px;
 	margin-top: 25px;
 	margin-bottom: 25px;
-	font-family: Arial;
 	display: grid;
 	grid-column: 5;
 	grid-row: 2;
