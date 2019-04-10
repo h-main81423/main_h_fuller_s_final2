@@ -1,0 +1,6 @@
+# ignore content of these folders
+/assets/wireframes
+
+
+#ignore these sources #
+*.psd
