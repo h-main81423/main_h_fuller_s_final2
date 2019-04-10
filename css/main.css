@@ -812,7 +812,6 @@ input [ type=text ], select, textarea, #message
 {
 	display: flex;
 	flex-direction: column;
-	margin-left: 30px;
 	width: 400px;
 	margin-bottom: 20px;
 }
@@ -821,6 +820,7 @@ input [ type=text ], select, textarea, #message
 {
 	font-size: 24px;
 	margin-top: 15px;
+	margin-left: 10px;
 	line-height: 30px;
 	text-indent: 10px;
 }
@@ -903,6 +903,7 @@ input [ type=text ], select, textarea, #message
 {
 	margin-top: 25px;
 	margin-bottom: 25px;
+	line-height: 35px;
 	width: 975px;
 	height: auto;
 	color: #5d7032;
@@ -917,7 +918,7 @@ input [ type=text ], select, textarea, #message
 #projectsBottom {
 	margin-top: 25px;
 	margin-bottom: 25px;
-	width: 975px;
+	width: 960px;
 	height: auto;
 	color: #5d7032;
 }
@@ -926,12 +927,13 @@ input [ type=text ], select, textarea, #message
 {
 	display: flex;
 	flex-direction: row-reverse;
-	justify-content: space-around;
+	justify-content: space-between;
 	padding: 10px; 
 }
 
 .projBottom2 h3 
 {
+	padding: 0px !important;
 	font-size: 30px;
 	font-weight: bold;
 }
@@ -949,21 +951,27 @@ input [ type=text ], select, textarea, #message
 	margin-bottom: 20px;
 }
 
+.projImgs
+{
+	padding: 15px;
+}
+
 
 #projectArchives
 {
+	width: 400px;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
-	margin-left: 50px;
+	justify-content: space-between; 
 	margin-bottom: 20px;
+	margin-left: 10px;
 }
 
 .projButton
 {	
 	font-size: 20px;
 	margin-bottom: 10px;
-	width: auto;
+	width: 150px;
 	padding: 5px;
 	color: #5d7032;
 	background-color: #FFF;
@@ -1366,7 +1374,7 @@ input [ type=text ], select, textarea, #message
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2c584', endColorstr='#cced87',GradientType=0 ); /* IE6-9 */
 	padding-top: 5px;
 	border-radius: 10px;
-	width: 85px;
+	width: 100px;
 	margin-right: 3px;
 	height: 30px;
 }
