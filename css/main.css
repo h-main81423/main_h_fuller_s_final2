@@ -37,12 +37,14 @@ a
 .title
 {
 	font-family: 'Noto Sans JP', sans-serif;
+	font-size: 30px;
 	color: #5d7032;
 }
 
 .title h1, h2, h3
 {
 	font-weight: bold;
+	font-size: 30px; 
 	padding: 10px;
 	line-height: 40px;
 }
@@ -57,7 +59,103 @@ a
 	font-weight: bold;
 }
 
+/*ALL PAGES*/
+
+#logoContainer
+{
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+}
+
+#mainNav
+{
+  display: flex;
+  flex-direction: column;
+}
+
+#mainNav button
+{
+  background: url(../images/menu.svg) center no-repeat;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  transition: all 400ms ease;
+  margin-left: auto;
+}
+
+#mainNav button.expanded
+{
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+#mainNav li a
+{
+  display: block;
+  padding: 10px 0 10px 0; /*trbl*/
+  color: #5d7032;
+  text-align: center;
+}
+
+#search
+{
+  width: 320px;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+#mainNav input[type=search]
+{
+  display: block;
+  width: 40%;
+  height: 20px;
+  padding: 5px;
+  margin-left: 30px;
+  border: 1px solid #333;
+  border-radius: 3px 0px 3px 0px;
+  background-color: #fefefe;
+  box-shadow: inset 0 1px 2px rgba(10,10,10, 0.1);
+  color: #0a0a0a;
+}
+
+#mainNav input[type=submit]
+{
+  height: 25px;
+  width: 100px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 14px;
+  background-color: #5d7032;
+  color: #FFF;
+  border: 0;
+  margin-left: 10px;
+}
+
+#burgerCon
+{
+  margin-top: 20px;
+  display: none;
+}
+
+#burgerCon.slideToggle
+{
+  display: block;
+}
+
+
+/*INDEX STARTING WITH MOBILE*/
+
+
+
 @media screen and (min-width: 960px) {
+
+#burger
+{
+	display: none;
+}
 
 .divider
 {
@@ -108,6 +206,11 @@ a
 
 /*ALL PAGE STYLE*/
 
+ #mainHeader
+ {
+    display: flex;
+ }
+
 #mainNav {
 	height: 150px;
 	width: 960px;
@@ -118,46 +221,32 @@ a
     background: linear-gradient(to bottom, #cedcad 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedcad', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 	display: flex;
-	justify-content: space-evenly;
-	text-align: center;
+	flex-direction: row;
 	margin: 0 auto;
+	text-align: center;
 }
 
 #logoContainer {
 	width: 150px;
 	height: 150px;
 	margin-top: 10px;
-	margin-left: 15px;
+	margin-left: 10px;
+	order: -1;
 }
 
-#mainNav ul {
+#burgerCon ul {
 	display: flex;
+	margin-left: 20px;
 	height: 100px;
-	margin-top: 75px;
 }
 
-#mainNav ul li {
+#burgerCon ul li {
 	font-family: 'Noto Sans JP', sans-serif;
-	font-size: 16px;
-	color: #485725;
+	font-size: 14px;
 	margin-left: 5px;
 }
 
-#Sbutton{
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b2c584+0,cced87+100 */
-	background: #b2c584; /* Old browsers */
-    background: -moz-linear-gradient(top, #b2c584 0%, #cced87 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #b2c584 0%,#cced87 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #b2c584 0%,#cced87 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2c584', endColorstr='#cced87',GradientType=0 ); /* IE6-9 */
-	padding-top: 5px;
-	border-radius: 10px;
-	width: 75px;
-	margin-right: 3px;
-	height: 20px;
-}
-
-#mainNav ul li a {
+#burgerCon ul li a {
 	text-decoration: none;
 	flex-direction: row;
 	padding: 5px;
@@ -165,8 +254,20 @@ a
 	color: #5d7032;
 }
 
-#mainNav ul li a:hover {
+#burgerCon ul li a:hover {
 	color: #FFF;
+}
+
+#burgerCon
+{
+	display: flex;
+	flex-direction: row;
+	margin-top: 75px;
+}
+
+#search
+{
+	margin-left: 20px;
 }
 
 .MbuttonCon
@@ -277,6 +378,7 @@ a
 	width: 960px;
 	display: flex;
 	height: 50px;
+	margin: 0 auto;
 }
 
 #footerNav ul li 
@@ -1086,6 +1188,11 @@ input [ type=text ], select, textarea, #message
 /*WEB MEDIA QUERY 2*/
 @media screen and (min-width: 1050px) {
 
+#burger
+{
+	display: none;
+}
+
 .divider
 {
 	max-width: 960px;
@@ -1099,8 +1206,13 @@ input [ type=text ], select, textarea, #message
 	align-content: center;
 }
 
+ #mainHeader
+ {
+    display: flex;
+ }
+
 #mainNav {
-	height: 175px;
+	height: 150px;
 	width: 1050px;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cedcad+0,ffffff+100 */
 	background: #cedcad; /* Old browsers */
@@ -1109,33 +1221,54 @@ input [ type=text ], select, textarea, #message
     background: linear-gradient(to bottom, #cedcad 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedcad', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	text-align: center;
 }
 
 #logoContainer {
 	width: 150px;
 	height: 150px;
 	margin-top: 10px;
-	margin-left: 15px;
+	margin-left: 50px;
+	order: -1;
 }
 
-#mainNav ul{
+#burgerCon ul {
 	display: flex;
-	height: 175px;
-	margin-top: 75px;
+	margin-left: 20px;
+	height: 100px;
 }
 
-#mainNav ul li {
-	font-size: 18px;
+#burgerCon ul li {
+	font-family: 'Noto Sans JP', sans-serif;
+	font-size: 16px;
 	color: #485725;
 	margin-left: 5px;
 }
 
-#mainNav ul li a {
+#burgerCon ul li a {
 	text-decoration: none;
 	flex-direction: row;
 	padding: 5px;
 	border-radius: 10px;
 	color: #5d7032;
+}
+
+#burgerCon ul li a:hover {
+	color: #FFF;
+}
+
+#burgerCon
+{
+	display: flex;
+	flex-direction: row;
+	margin-top: 75px;
+}
+
+#search
+{
+	margin-left: 20px;
 }
 
 #footer {
@@ -1198,13 +1331,23 @@ input [ type=text ], select, textarea, #message
 
 @media screen and (min-width: 1200px) {
 
+#burger
+{
+	display: none;
+}
+
 .divider
 {
 	max-width: 1000px;
 }
 
+ #mainHeader
+ {
+    display: flex;
+ }
+
 #mainNav {
-	height: 175px;
+	height: 150px;
 	width: 1200px;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cedcad+0,ffffff+100 */
 	background: #cedcad; /* Old browsers */
@@ -1213,29 +1356,33 @@ input [ type=text ], select, textarea, #message
     background: linear-gradient(to bottom, #cedcad 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedcad', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	text-align: center;
 }
 
 #logoContainer {
 	width: 150px;
 	height: 150px;
 	margin-top: 10px;
-	margin-left: 25px;
+	margin-left: 125px;
+	order: -1;
 }
 
-#mainNav ul {
+#burgerCon ul {
 	display: flex;
-	height: 175px;
-	margin-top: 75px;
+	margin-left: 20px;
+	height: 100px;
 }
 
-#mainNav ul li {
-	font-size: 20px;
+#burgerCon ul li {
+	font-family: 'Noto Sans JP', sans-serif;
+	font-size: 16px;
 	color: #485725;
-	margin-left: 15px;
+	margin-left: 5px;
 }
 
-
-#mainNav ul li a {
+#burgerCon ul li a {
 	text-decoration: none;
 	flex-direction: row;
 	padding: 5px;
@@ -1243,16 +1390,20 @@ input [ type=text ], select, textarea, #message
 	color: #5d7032;
 }
 
-#mainNav ul li a:hover {
- /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b2c584+0,cced87+100 */
-	background: #b2c584; /* Old browsers */
-    background: -moz-linear-gradient(top, #b2c584 0%, #cced87 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #b2c584 0%,#cced87 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #b2c584 0%,#cced87 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2c584', endColorstr='#cced87',GradientType=0 ); /* IE6-9 */
-	box-shadow: 2px 1px 18px #a6b87b;
-	border-radius: 10px;
-	padding: 5px;
+#burgerCon ul li a:hover {
+	color: #FFF;
+}
+
+#burgerCon
+{
+	display: flex;
+	flex-direction: row;
+	margin-top: 75px;
+}
+
+#search
+{
+	margin-left: 20px;
 }
 
 #footer {
@@ -1313,8 +1464,18 @@ input [ type=text ], select, textarea, #message
 
 @media screen and (min-width: 1400px) {
 
+#burger
+{
+	display: none;
+}
+
+ #mainHeader
+ {
+    display: flex;
+ }
+
 #mainNav {
-	height: 175px;
+	height: 150px;
 	width: 1400px;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cedcad+0,ffffff+100 */
 	background: #cedcad; /* Old browsers */
@@ -1323,29 +1484,33 @@ input [ type=text ], select, textarea, #message
     background: linear-gradient(to bottom, #cedcad 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedcad', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	text-align: center;
 }
 
 #logoContainer {
 	width: 150px;
 	height: 150px;
 	margin-top: 10px;
-	margin-left: 15px;
+	margin-left: 225px;
+	order: -1;
 }
 
-#mainNav ul {
+#burgerCon ul {
 	display: flex;
-	height: 175px;
-	margin-top: 75px;
+	margin-left: 20px;
+	height: 100px;
 }
 
-#mainNav ul li {
-	font-size: 24px;
+#burgerCon ul li {
+	font-family: 'Noto Sans JP', sans-serif;
+	font-size: 16px;
 	color: #485725;
-	margin-left: 10px;
+	margin-left: 5px;
 }
 
-
-#mainNav ul li a {
+#burgerCon ul li a {
 	text-decoration: none;
 	flex-direction: row;
 	padding: 5px;
@@ -1353,30 +1518,20 @@ input [ type=text ], select, textarea, #message
 	color: #5d7032;
 }
 
-#mainNav ul li a:hover {
- /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b2c584+0,cced87+100 */
-	background: #b2c584; /* Old browsers */
-    background: -moz-linear-gradient(top, #b2c584 0%, #cced87 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #b2c584 0%,#cced87 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #b2c584 0%,#cced87 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2c584', endColorstr='#cced87',GradientType=0 ); /* IE6-9 */
-	box-shadow: 2px 1px 18px #a6b87b;
-	border-radius: 10px;
-	padding: 5px;
+#burgerCon ul li a:hover {
+	color: #FFF;
 }
 
-#Sbutton{
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b2c584+0,cced87+100 */
-	background: #b2c584; /* Old browsers */
-    background: -moz-linear-gradient(top, #b2c584 0%, #cced87 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #b2c584 0%,#cced87 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #b2c584 0%,#cced87 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2c584', endColorstr='#cced87',GradientType=0 ); /* IE6-9 */
-	padding-top: 5px;
-	border-radius: 10px;
-	width: 100px;
-	margin-right: 3px;
-	height: 30px;
+#burgerCon
+{
+	display: flex;
+	flex-direction: row;
+	margin-top: 75px;
+}
+
+#search
+{
+	margin-left: 20px;
 }
 
 #footer {
