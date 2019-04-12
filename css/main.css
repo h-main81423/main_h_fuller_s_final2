@@ -268,31 +268,36 @@ a
 	margin: 0 auto;
 	color: #5d7032;
 	font-family: 'Noto Sans JP', sans-serif;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 40px 175px 175px 175px 175px 100px;
+	grid-column-gap: 25px;
+	grid-row-gap: 20px;
 }
 
-#fundraiser p
+.funTitle
 {
-	width: auto;
-	margin-top: 15px;
-	font-size: 24px;
-	line-height: 35px;
-	text-align: left;
+	width: 100%;
+	grid-column: 1/-1;
+	margin: 0 auto;	
+	text-align: center;
 }
 
 #fundraiserImgs
 {
-	width: 100%;
 	padding-top: 15px;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: repeat(3, 175px);
-	grid-gap: 10px;
+	grid-column: 1/2;
+	grid-row: 3/6;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin-top: 20px;
 }
 
 .img2
 {
 	grid-column: 1/2;
-	grid-row: 2/3;
+	grid-row: 2/6;
 }
 
 .img3
@@ -306,20 +311,47 @@ a
 	width: 225px;
 	height: 175px;
 	margin-left: 15px;
+	margin-top: 10px;
 }
 
 .fundraiserTitle
 {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	grid-column: 2/-1;
+	grid-row: 3/6;
+	margin-top: 20px;
 	text-align: center;
 	line-height: 35px;
 }
 
+.fundraiserTitle p
+{
+	margin-top: 40px;
+}
+
 #fundraiserText
+{
+	grid-column: 1/-1;
+	grid-row: 2/6;
+	width: 90%;
+	line-height: 35px;
+	text-align: center;
+	margin: 0 auto;
+	padding-bottom: 30px;
+}
+
+#fundraiserText2
 {
 	width: 90%;
 	line-height: 35px;
 	text-align: center;
 	margin: 0 auto;
+	grid-column: 1/-1;
+	grid-row: 6/6;
+	font-weight: bold;
+	margin-bottom: 30px;
 }
 
 /*INDEX STARTING WITH MOBILE*/
@@ -452,7 +484,6 @@ a
 {	
 	width: 100%;
 	text-indent: 20px;
-	flex-direction: row;
 	font-size: 22px;
 	line-height: 35px;
 }
@@ -556,8 +587,8 @@ a
 {
 	display: flex;
 	flex-direction: column;
-	margin-top: 10px;
-	margin-bottom: 20px; 
+	padding: 10px;
+	margin: 0 auto; 
 }
 
 #about2TextCon p 
@@ -570,7 +601,241 @@ a
 	text-indent: 25px;
 }
 
+/*PAST EVENTS PAGE*/
 
+#eventCon
+{
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+	color: #5d7032;
+	text-align: center;
+}
+
+#eventCon p
+{
+	width: 90%;
+	text-align: left;
+}
+
+.eventBox
+{
+	width: 320px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-rows: repeat(27,100px); 
+	grid-template-columns: repeat(2, 175px);
+	grid-column-gap: 10px;
+	padding: 15px;
+}
+
+#evBottom
+{
+	width: 320px;
+	padding: 15px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-rows: repeat(3, auto); 
+	grid-template-columns: repeat(2, auto);
+	grid-column-gap: 10px; 
+	grid-row-gap: 10px;
+}
+
+.eventImg
+{
+	margin-top: 10px;
+}
+
+.eventButtons
+{	
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 70px;
+	height: 30px;
+	padding: 5px;
+	color: #5d7032;
+	background-color: #FFF;
+	border: 1px dashed #5d7032;
+}
+
+/*event placement, one liners to reduce amount of space taken up by code*/
+#eventTitle1{grid-row: 2/27; grid-column: 1/2; margin-top: 40px;}
+.evButton1{grid-row: 3/27; grid-column: 1/2;} 
+#eventTitle2{grid-row: 2/27; grid-column: 2/-1; margin-top: 40px;}
+.evButton2{grid-row: 3/27; grid-column: 2/-1;}  
+
+.event3{grid-row: 4/27; grid-column: 1/2;}
+#eventTitle3{grid-row: 5/27; grid-column: 1/2; margin-top: 40px;}
+.evButton3{grid-row: 6/27; grid-column: 1/2;}  
+.event4{grid-row: 4/27; grid-column: 2/-1;}
+#eventTitle4{grid-row: 5/27; grid-column: 2/-1; margin-top: 40px;}
+.evButton4{grid-row: 6/27; grid-column: 2/-1;}
+
+.event5{grid-row: 7/27; grid-column: 1/2;}
+#eventTitle5{grid-row: 8/27; grid-column: 1/2; margin-top: 40px;}
+.evButton5{grid-row: 9/27; grid-column: 1/2;} 
+.event6{grid-row: 7/27; grid-column: 2/-1;}
+#eventTitle6{grid-row: 8/27; grid-column: 2/-1; margin-top: 40px;}
+.evButton6{grid-row: 9/27; grid-column: 2/-1;}
+
+.event7{grid-row: 10/27; grid-column: 1/2;}
+#eventTitle7{grid-row: 11/27; grid-column: 1/2; margin-top: 40px;}
+.evButton7{grid-row: 12/27; grid-column: 1/2;}
+.event8{grid-row: 10/27; grid-column: 2/-1;}
+#eventTitle8{grid-row: 11/27; grid-column: 2/-1; margin-top: 40px;}
+.evButton8{grid-row: 12/27; grid-column: 2/-1;}
+
+.event9{grid-row: 13/27; grid-column: 1/2;}
+#eventTitle9{grid-row: 14/27; grid-column: 1/2; margin-top: 40px;}
+.evButton9{grid-row: 15/27; grid-column: 1/2;}
+.event10{grid-row: 13/27; grid-column: 2/-1;}
+#eventTitle10{grid-row: 14/27; grid-column: 2/-1; margin-top: 40px;}
+.evButton10{grid-row: 15/27; grid-column: 2/-1;}
+
+.event11{grid-row: 16/27; grid-column: 1/2;}
+#eventTitle11{grid-row: 17/27; grid-column: 1/2; margin-top: 40px;}
+.evButton11{grid-row: 18/27; grid-column: 1/2;}
+.event12{grid-row: 16/27; grid-column: 2/-1;}
+#eventTitle12{grid-row: 17/27; grid-column: 2/-1; margin-top: 40px;}
+.evButton12{grid-row: 18/27; grid-column: 2/-1;}
+
+.event13{grid-row: 19/27; grid-column: 1/2;}
+#eventTitle13{grid-row: 20/27; grid-column: 1/2; margin-top: 40px;}
+.evButton13{grid-row: 21/27; grid-column: 1/2;}
+.event14{grid-row: 19/27; grid-column: 2/-1;}
+#eventTitle14{grid-row: 20/27; grid-column: 2/-1; margin-top: 40px;}
+.evButton14{grid-row: 21/27; grid-column: 2/-1;}
+
+.event15{grid-row: 22/27; grid-column: 1/2;}
+#eventTitle15{grid-row: 23/27; grid-column: 1/2; margin-top: 40px;}
+.evButton15{grid-row: 24/27; grid-column: 1/2;}
+.event16{grid-row: 22/27; grid-column: 2/-1;}
+#eventTitle16{grid-row: 23/25; grid-column: 2/-1; margin-top: 40px;}
+.evButton16{grid-row: 24/27; grid-column: 2/-1;}
+
+.event17{grid-row: 25/27; grid-column: 1/2;}
+#eventTitle17{grid-row: 26/27; grid-column: 1/2; margin-top: 40px;}
+.evButton17{grid-row: 27/27; grid-column: 1/2;}
+.event18{grid-row: 25/27; grid-column: 2/-1;}
+#eventTitle18{grid-row: 26/27; grid-column: 2/-1; margin-top: 40px;}
+.evButton18{grid-row: 27/27; grid-column: 2/-1;}
+
+/*PROJECTS*/
+
+#subtitleP h3
+{
+	font-size: 24px;
+	font-weight: bold;
+	padding: 10px;
+	text-align: center;
+}
+
+#projectsTop 
+{
+	margin: 0 auto;
+	width: 100%;
+	text-align: left;
+	font-size: 24px;
+	padding: 10px; 
+}
+
+#projectsCon 
+{
+	margin-top: 25px;
+	margin-bottom: 25px;
+	line-height: 35px;
+	width: 100%;
+	height: auto;
+	color: #5d7032;
+}
+
+#projectsImageCon 
+{
+	width: 100%;
+	margin: 0 auto;
+	padding: 10px; 
+}
+
+#projectsBottom {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	width: 100%
+	height: auto;
+	color: #5d7032;
+}
+
+.projBottom
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(2, auto); 
+	margin: 0 auto;
+	padding: 10px; 
+}
+
+.projBottom2 h3 
+{
+	padding: 0px !important;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.projBottom2 
+{
+	font-size: 24px;
+	line-height: 35px;
+	width: 90%;
+	grid-row: 2/-1;
+	grid-column: 1/-1;
+}
+
+.projBottom2 p
+{
+	text-indent: 20px;
+	margin-bottom: 20px;
+}
+
+.projImgs
+{
+	margin: 0 auto;
+}
+
+
+#projectArchives
+{
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between; 
+	margin-bottom: 20px;
+	margin-left: 10px;
+}
+
+.buttonCon
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.projButton
+{	
+	font-size: 20px;
+	margin-bottom: 10px;
+	width: 150px;
+	padding: 5px;
+	color: #5d7032;
+	background-color: #FFF;
+	border: 1px dashed #5d7032;
+	margin-right: 40px;
+}
+
+.projButton a
+{
+	color: #5d7032;
+}
+
+/*MEDIA QUERIES*/
 @media screen and (min-width: 960px) {
 
 .web
@@ -743,13 +1008,16 @@ a
 
 #fundraiser
 {
-	width: 920px;
+	width: 960px;
 	height: auto;
 	font-size: 30px;
-	padding: 20px;
-	margin: 0 auto;
 	color: #5d7032;
 	font-family: 'Noto Sans JP', sans-serif;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 30px 100px 175px 100px;
+	grid-column-gap: 50px;
+	grid-row-gap: 20px; 
 }
 
 #fundraiser p
@@ -758,16 +1026,18 @@ a
 	font-size: 24px;
 	line-height: 35px;
 	text-align: center;
+	grid-column: span 3;
 }
 
 #fundraiserImgs
 {
-	width: 920px;
-	padding-top: 15px;
-	display: grid;
-	grid-template-columns: 225px 225px 225px;
-	grid-template-rows: 175px;
-	grid-column-gap: 100px;
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	grid-row: 3/5;
+	grid-column: 1/-1
 }
 
 .fundraiserImg
@@ -778,16 +1048,33 @@ a
 
 .fundraiserTitle
 {
+	margin: 0 auto;
 	text-align: center;
 	line-height: 35px;
+	grid-row: 4/5;
+	grid-column: 1/-1;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 #fundraiserText
 {
-	width: 850px;
+	margin: 0 auto;
+	width: 90%;
+	grid-row: 2/5;
+	grid-column: 1/-1;
 	line-height: 35px;
+}
+
+#fundraiserText2
+{
+	grid-row: 5/-1;
+	grid-column: 1/-1;
+	width: 80%;
 	margin: 0 auto;
 }
+
 
 #footer {
 	height: 50px;
@@ -917,6 +1204,7 @@ a
 {
 	margin-top: 25px;
 	margin-bottom: 25px;
+	margin: 0 auto;
 	width: 960px;
 	height: auto;
 	color: #5d7032;
@@ -928,16 +1216,20 @@ a
 	padding: 10px;
 	margin-left: 30px;
 	font-family: 'Noto Sans JP', sans-serif;
-	display: flex;
+	display: grid;
+	grid-gap: 40px;
+	grid-template-columns: 300px 1fr;
+	grid-template-rows: 300px auto;
 }
 
 .announcement
 {	
 	margin-left: 40px;
-	width: 500px;
 	font-size: 22px;
 	text-indent: 25px;
 	line-height: 35px;
+	grid-column: 1/-1;
+	grid-row: 2/-1;
 }
 
 .announcement h2
@@ -966,6 +1258,7 @@ a
 .businesses
 {
 	display: flex;
+	flex-direction: row;
 	margin-top: 20px;
 }
 
@@ -973,7 +1266,6 @@ a
 {	
 	margin-left: 30px;
 	text-indent: 20px;
-	flex-direction: row;
 	font-size: 22px;
 	line-height: 35px;
 }
@@ -1290,7 +1582,7 @@ input [ type=text ], select, textarea, #message
 	padding-top: 15px;
 	margin-left: 50px;
 	display: grid;
-	grid-template-rows: auto; 
+	grid-template-rows: repeat(18, 125px); 
 	grid-template-columns: repeat(3, 225px);
 	grid-column-gap: 100px; 
 	grid-row-gap: 10px;
@@ -1324,6 +1616,66 @@ input [ type=text ], select, textarea, #message
 	background-color: #FFF;
 	border: 1px dashed #5d7032;
 }
+
+/*event placement, one liners to reduce amount of space taken up by code*/
+#eventTitle1{grid-row: 2/18; grid-column: 1/3; margin-top: 50px;}
+.evButton1{grid-row: 3/18; grid-column: 1/3;} 
+#eventTitle2{grid-row: 2/18; grid-column: 2/3; margin-top: 50px;}
+.evButton2{grid-row: 3/18; grid-column: 2/3;} 
+.event3{grid-row: 1/18; grid-column: 3/-1;}
+#eventTitle3{grid-row: 2/18; grid-column: 3/-1; margin-top: 50px;}
+.evButton3{grid-row: 3/18; grid-column: 3/-1;} 
+
+.event4{grid-row: 4/18; grid-column: 1/3;}
+#eventTitle4{grid-row: 5/18; grid-column: 1/3; margin-top: 50px;}
+.evButton4{grid-row: 6/18; grid-column: 1/3;}
+.event5{grid-row: 4/18; grid-column: 2/3;}
+#eventTitle5{grid-row: 5/18; grid-column: 2/3; margin-top: 50px;}
+.evButton5{grid-row: 6/18; grid-column: 2/3;} 
+.event6{grid-row: 4/18; grid-column: 3/-1;}
+#eventTitle6{grid-row: 5/18; grid-column: 3/-1; margin-top: 50px;}
+.evButton6{grid-row: 6/18; grid-column: 3/-1;}
+
+.event7{grid-row: 7/18; grid-column: 1/3;}
+#eventTitle7{grid-row: 8/18; grid-column: 1/3; margin-top: 50px;}
+.evButton7{grid-row: 9/18; grid-column: 1/3;}
+.event8{grid-row: 7/18; grid-column: 2/3;}
+#eventTitle8{grid-row: 8/18; grid-column: 2/3; margin-top: 50px;}
+.evButton8{grid-row: 9/18; grid-column: 2/3;}
+.event9{grid-row: 7/18; grid-column: 3/-1;}
+#eventTitle9{grid-row: 8/18; grid-column: 3/-1; margin-top: 50px;}
+.evButton9{grid-row: 9/18; grid-column: 3/-1;}
+
+.event10{grid-row: 10/18; grid-column: 1/3;}
+#eventTitle10{grid-row: 11/18; grid-column: 1/3; margin-top: 50px;}
+.evButton10{grid-row: 12/18; grid-column: 1/3;}
+.event11{grid-row: 10/18; grid-column: 2/3;}
+#eventTitle11{grid-row: 11/18; grid-column: 2/3; margin-top: 50px;}
+.evButton11{grid-row: 12/18; grid-column: 2/3;}
+.event12{grid-row: 10/18; grid-column: 3/-1;}
+#eventTitle12{grid-row: 11/18; grid-column: 3/-1; margin-top: 50px;}
+.evButton12{grid-row: 12/18; grid-column: 3/-1;}
+
+.event13{grid-row: 13/18; grid-column: 1/3;}
+#eventTitle13{grid-row: 14/18; grid-column: 1/3; margin-top: 50px;}
+.evButton13{grid-row: 15/18; grid-column: 1/3;}
+.event14{grid-row: 13/18; grid-column: 2/3;}
+#eventTitle14{grid-row: 14/18; grid-column: 2/3; margin-top: 50px;}
+.evButton14{grid-row: 15/18; grid-column: 2/3;}
+.event15{grid-row: 13/18; grid-column: 3/-1;}
+#eventTitle15{grid-row: 14/18; grid-column: 3/-1; margin-top: 50px;}
+.evButton15{grid-row: 15/18; grid-column: 3/-1;}
+
+.event16{grid-row: 16/18; grid-column: 1/3;}
+#eventTitle16{grid-row: 17/18; grid-column: 1/3; margin-top: 50px;}
+.evButton16{grid-row: 18/-1; grid-column: 1/3;}
+.event17{grid-row: 16/18; grid-column: 2/3;}
+#eventTitle17{grid-row: 17/18; grid-column: 2/3; margin-top: 50px;}
+.evButton17{grid-row: 18/-1; grid-column: 2/3;}
+.event18{grid-row: 16/18; grid-column: 3/-1;}
+#eventTitle18{grid-row: 17/18; grid-column: 3/-1; margin-top: 50px;}
+.evButton18{grid-row: 18/-1; grid-column: 3/-1;}
+
 
 /*MORE*/
 
