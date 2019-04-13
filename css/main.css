@@ -198,7 +198,7 @@ a
   justify-content: center;
 }
 
-#mobileFoot button
+#mobileFoot button 
 {
   height: 40px;
   width: 100px;
@@ -211,7 +211,6 @@ a
   margin-left: 10px;
   margin-top: 5px;
 }
-
 
 #membershipText
 {	
@@ -1097,22 +1096,28 @@ input [ type=text ], select, textarea, #message
 	list-style: none; 
 }
 
+#newsletters ol li
+{
+	padding: 10px;
+}
+
 .toggle
 {
 	font-size: 24px;
 	font-weight: bold;
 	width: 100%;
 	list-style: none; 
+	background-color: #cedcad;
 }
 
 .toggle:after
 {
-	content: " - Open";
+	content: " +";
 }
 
 .toggle.clicked:after
 {
-	content: " - Close";
+	content: " -";
 }
 
 .toggled
@@ -1236,6 +1241,18 @@ input [ type=text ], select, textarea, #message
 
 
 /*MEDIA QUERIES*/
+
+/*LARGE MOBILE*/
+@media screen and (min-width: 425px) {
+	
+	#heroSlogan p
+	{
+		margin-bottom: 250px;
+	}
+}
+
+
+/*TABLET*/
 @media screen and (min-width: 600px) {
 	
 	/*ALL PAGES*/
@@ -1321,6 +1338,56 @@ input [ type=text ], select, textarea, #message
 		grid-column: 1/-1;
 		width: 80%;
 		margin: 0 auto;
+	}
+
+	/*HOMEPAGE*/
+	#heroSlogan p
+	{
+		margin-bottom: 275px;
+	}
+		
+	#announcements
+	{
+		width: 100%;
+		box-sizing: content-box;
+		height: auto;
+		color: #5d7032;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.announcements
+	{	
+		margin: 0 auto;
+		width: 100%;
+		font-family: 'Noto Sans JP', sans-serif;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.announcement 
+	{	
+		width: 90%;
+		margin: 0 auto;
+		font-size: 20px;
+		text-indent: 25px;
+		line-height: 35px;
+	}
+
+	.announcementTitle
+	{
+		font-size: 24px;
+		text-indent: 0px;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	.announcementImg
+	{
+		margin: 0 auto;
+		width: 100%;
+		
 	}
 
 	/*ABOUT*/
@@ -1447,6 +1514,8 @@ input [ type=text ], select, textarea, #message
 #siteContainer
 {
 	max-width: 1400px;
+	margin: 0 auto;
+	justify-content: center;
 }
 
 .web
@@ -1814,6 +1883,7 @@ input [ type=text ], select, textarea, #message
 	height: 400px;
 	width: 960px;
 	margin: 0 auto;
+	margin-top: 25px;
 	background-image: linear-gradient(rgba(255, 255, 204, 0.13), rgba(0, 0, 0, 0)), url("../images/hero.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
@@ -1834,13 +1904,18 @@ input [ type=text ], select, textarea, #message
 	color: #FFF;
 }
 
+#heroSlogan p
+{
+	margin-bottom: 300px;
+}
+
 #heroText
 {
 	width: 960px;
 	height: 75px;
 	margin: 0 auto;
 	margin-top: 25px;
-	margin-bottom: 25px;
+	padding-bottom: 35px;
 	text-align: center;
 	font-family: 'Noto Sans JP', sans-serif;
 	line-height: 35px;
@@ -1869,39 +1944,43 @@ input [ type=text ], select, textarea, #message
 	width: 960px;
 	height: auto;
 	color: #5d7032;
+
 }
 
 .announcements
 {	
 	width: 940px;
 	padding: 10px;
-	margin-left: 30px;
 	font-family: 'Noto Sans JP', sans-serif;
 	display: grid;
-	grid-gap: 40px;
-	grid-template-columns: 300px 1fr;
+	grid-gap: 20px;
+	grid-template-columns: 1fr 1fr;
+	justify-content: center;
 	grid-template-rows: 300px auto;
 }
 
 .announcement
 {	
-	margin-left: 40px;
 	font-size: 22px;
 	line-height: 35px;
-	grid-column: 1/-1;
-	grid-row: 2/-1;
 }
 
 .announcement p
 {
 	text-indent: 20px;	
 	margin-bottom: 5px;
+	grid-column: 1/-1;
+	grid-row: 2/-1;
 }
 
-.announcement h2
+.announcementTitle
 {
 	font-size: 24px;
 	font-weight: bold;
+	text-align: left;
+	margin: 0px;
+	grid-column: 2/-1;
+	grid-row: 1/3;
 }
 
 .announcementImg
@@ -1909,12 +1988,14 @@ input [ type=text ], select, textarea, #message
 	width: 300px;
 	height: 300px;
 	margin-top: 10px;
+	grid-column: 1/2;
 }
 
 #businesses
 {
 	margin-top: 25px;
 	margin-bottom: 25px;
+	margin: 0 auto;
 	width: 960px;
 	height: auto;
 	color: #5d7032;
@@ -1969,6 +2050,11 @@ input [ type=text ], select, textarea, #message
 	justify-content: space-evenly;
 }
 
+.title.committee
+{
+	width: 940px;
+}
+
 .members 
 {
 	margin: 0 auto;
@@ -1994,14 +2080,15 @@ input [ type=text ], select, textarea, #message
 {
 	margin-top: 25px;
 	margin-bottom: 25px;
-	width: 975px;
+	margin: 0 auto;
+	width: 960px;
 	height: auto;
 	color: #5d7032;
 }
 
 #about1
 {
-	width: 975px;
+	width: 960px;
 	display: flex;
 	justify-content: center;
 	margin: 0 auto;
@@ -2036,7 +2123,7 @@ input [ type=text ], select, textarea, #message
 {
 	color: #5d7032;
 	display: flex;
-	width: 975px;
+	width: 960px;
 	height: auto;
 	margin-top: 25px;
 	margin-bottom: 25px;
@@ -2383,24 +2470,35 @@ input [ type=text ], select, textarea, #message
 {
 	margin-top: 25px;
 	margin-bottom: 25px;
-	width: 960px;
+	width: 100%;
 	height: auto;
 	color: #5d7032;
 }
 
-#newsletter
+#newsCon a
 {
-	width: 960px;
-	display: flex;
-	margin: 0 auto;
+	text-decoration: none;
+	color: #5d7032;
+	font-size: 30px;
+	padding: 10px;
 }
 
+#newsletter
+{
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+}
 
 #news1TextCon
 {
 	display: flex;
 	flex-direction: column;
-	width: 400px;
+	justify-content: center;
+	width: 100%;
 	margin-bottom: 20px;
 }
 
@@ -2408,71 +2506,76 @@ input [ type=text ], select, textarea, #message
 {
 	font-size: 24px;
 	margin-top: 15px;
-	margin-left: 10px;
 	line-height: 30px;
-	text-indent: 10px;
+	text-align: center;
 }
 
 #subtitle p
 {
 	text-indent: 0px;
-	width: 400px;
+	width: 50%;
 	font-size: 30px;
 	font-family: 'Noto Sans JP', sans-serif;
 }
 
 #newsletters
 {
-	width: 415px;
+	width: 100%;
+	text-align: center;
 	height: auto;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e6f9bc+0,bbcf8c+100 */
-    background: #e6f9bc; /* Old browsers */
-    background: -moz-linear-gradient(top, #e6f9bc 0%, #bbcf8c 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #e6f9bc 0%,#bbcf8c 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #e6f9bc 0%,#bbcf8c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6f9bc', endColorstr='#bbcf8c',GradientType=0 ); /* IE6-9 */
-	border-radius: 10px;
-	margin-left: 50px;
-	margin-top: 150px;
-	padding: 20px;
-	display: flex;
-	border: 1px #485725 dashed;
+	margin: 0 auto;
+	margin-top: 110px;
 }
 
 #newsletters ol
 {
-	width: 415px;
-	list-style: none;
-	text-align: left;
+	width: 100%;
+	list-style: none; 
 }
 
-#newsletters ul
+#newsletters ol li
 {
-	list-style: none;
-	padding-left: 20px; 
-	text-align: left;
-	display: block;
-}
-
-#newsletters ul li a
-{
-	color: #5d7032;
-	padding-top: 10px;
-	font-weight: normal;
-	text-decoration: none;
-	font-size: 16px;
-	line-height: 20px;
-}
-
-#newsletters ul li a:hover
-{
-	color: #485725;
-	padding: 20px;
+	padding: 10px;
 }
 
 .toggle
 {
-	font-size: 20px !important;
+	font-size: 24px;
+	font-weight: bold;
+	width: 100%;
+	list-style: none; 
+	background-color: #cedcad;
+}
+
+.toggle:after
+{
+	content: " +";
+}
+
+.toggle.clicked:after
+{
+	content: " -";
+}
+
+.toggled
+{
+	display: none;
+}
+
+.toggled.opened
+{
+	display: block;
+	background-color: 507032;
+	width: 100%;
+	padding: 5px;
+}
+
+#newsletters ul a
+{
+	list-style: none; 
+	text-align: center;
+	font-size: 20px;
+	font-weight: normal;
 }
 
 /* Projects Page */
@@ -2986,6 +3089,13 @@ input [ type=text ], select, textarea, #message
 	display: none;
 }
 
+#siteContainer
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
  #mainHeader
  {
     display: flex;
@@ -3054,7 +3164,6 @@ input [ type=text ], select, textarea, #message
 #footer {
 	height: 50px;
 	width: 1400px;
-	margin: 0 auto;
 	color: #5d7032;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,cedcad+100 */
 	background: #ffffff; /* Old browsers */
@@ -3063,6 +3172,7 @@ input [ type=text ], select, textarea, #message
     background: linear-gradient(to bottom, #ffffff 0%,#cedcad 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cedcad',GradientType=0 ); /* IE6-9 */
 	display: flex;
+	justify-content: center;
 }
 
 #footerNav
