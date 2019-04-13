@@ -72,6 +72,11 @@ a
 	display: none;
 }
 
+.tabImg
+{
+	display: none;
+}
+
 .divider
 {
 	width: 80%;
@@ -93,6 +98,8 @@ a
 {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  box-sizing: content-box;
 }
 
 #mainNav button
@@ -174,6 +181,7 @@ a
 #footer {
 	height: 50px;
 	width: 100%;
+	box-sizing: content-box;
 	margin: 0 auto;
 	color: #5d7032;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,cedcad+100 */
@@ -208,6 +216,7 @@ a
 #membershipText
 {	
 	width: 100%;
+	box-sizing: content-box;
 	height: auto;
 	font-family: 'Noto Sans JP', sans-serif;
 	font-size: 30px;
@@ -264,46 +273,33 @@ a
 #fundraiser
 {
 	width: 100%;
+	box-sizing: content-box;
 	height: auto;
-	margin: 0 auto;
 	color: #5d7032;
 	font-family: 'Noto Sans JP', sans-serif;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 40px 175px 175px 175px 175px 100px;
-	grid-column-gap: 25px;
-	grid-row-gap: 20px;
+	grid-template-columns: 150px 150px;
+	grid-template-rows: 40px 175px 125px 100px 100px 100px 150px;
+	grid-row-gap: 10px;
+	grid-column-gap: 10px;
+	justify-content: center;
 }
 
 .funTitle
 {
-	width: 100%;
-	grid-column: 1/-1;
+	width: 90%;
 	margin: 0 auto;	
 	text-align: center;
+	grid-column: 1/-1;
+	font-size: 36px;
 }
 
 #fundraiserImgs
 {
-	padding-top: 15px;
 	grid-column: 1/2;
-	grid-row: 3/6;
+	grid-row: 4/7;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
-	margin-top: 20px;
-}
-
-.img2
-{
-	grid-column: 1/2;
-	grid-row: 2/6;
-}
-
-.img3
-{
-	grid-column: 1/2;
-	grid-row: 3/-1;
 }
 
 .fundraiserImg
@@ -311,7 +307,6 @@ a
 	width: 225px;
 	height: 175px;
 	margin-left: 15px;
-	margin-top: 10px;
 }
 
 .fundraiserTitle
@@ -320,21 +315,21 @@ a
 	flex-direction: column;
 	justify-content: space-around;
 	grid-column: 2/-1;
-	grid-row: 3/6;
-	margin-top: 20px;
+	grid-row: 4/7;
 	text-align: center;
-	line-height: 35px;
+	line-height: 25px;
+
 }
 
 .fundraiserTitle p
 {
-	margin-top: 40px;
+
 }
 
 #fundraiserText
 {
 	grid-column: 1/-1;
-	grid-row: 2/6;
+	grid-row: 2/7 span 2;
 	width: 90%;
 	line-height: 35px;
 	text-align: center;
@@ -349,7 +344,7 @@ a
 	text-align: center;
 	margin: 0 auto;
 	grid-column: 1/-1;
-	grid-row: 6/6;
+	grid-row: 7/-1;
 	font-weight: bold;
 	margin-bottom: 30px;
 }
@@ -358,7 +353,8 @@ a
 
 #heroContainer
 {
-	width: 100%
+	width: 100%;
+	box-sizing: content-box;
 	margin: 0 auto;
 }
 
@@ -371,11 +367,10 @@ a
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	position: relative;
 }
 
 #heroSlogan {
-	width: 100%;
+	width: 90%;
 	height: 400px;
 	margin: 0 auto;
 	margin-top: 25px;
@@ -389,12 +384,13 @@ a
 
 #heroSlogan p
 {
-	margin-bottom: 250px;
+	margin-bottom: 200px;
 }
 
 #heroText
 {
 	width: 100%;
+	box-sizing: content-box;
 	height: auto;
 	margin: 0 auto;
 	margin-top: 25px;
@@ -422,8 +418,13 @@ a
 #announcements
 {
 	width: 100%;
+	box-sizing: content-box;
 	height: auto;
 	color: #5d7032;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 2fr;
+	grid-gap: 10px;
 }
 
 .announcements
@@ -431,10 +432,6 @@ a
 	margin: 0 auto;
 	width: 100%;
 	font-family: 'Noto Sans JP', sans-serif;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: auto 2fr;
-	grid-gap: 10px;
 }
 
 .announcement 
@@ -444,7 +441,7 @@ a
 	font-size: 20px;
 	text-indent: 25px;
 	line-height: 35px;
-	grid-row: 2/-1;
+	grid-row: 3/-1;
 	grid-row-gap: 0px;
 	grid-column: 1/-1;
 }
@@ -453,13 +450,17 @@ a
 {
 	font-size: 24px;
 	text-indent: 0px;
+	text-align: center !important;
 	font-weight: bold;
+	grid-column: 1/-1;
+	grid-row: 2/3;
 }
 
 .announcementImg
 {
-	margin-left: 20px;
-	margin-top: 20px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
 }
 
 /*busuinesses*/
@@ -469,6 +470,7 @@ a
 	margin-top: 25px;
 	margin-bottom: 25px;
 	width: 100%;
+	box-sizing: content-box;
 	height: auto;
 	color: #5d7032;
 	font-family: 'Noto Sans JP', sans-serif;
@@ -478,11 +480,13 @@ a
 {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 }
 
 .businessText
 {	
-	width: 100%;
+	width: 90%;
+	margin: 0 auto;
 	text-indent: 20px;
 	font-size: 22px;
 	line-height: 35px;
@@ -495,10 +499,10 @@ a
 
 .businessesImg
 {
-	width: 300px;
-	height: 175px;
-	padding: 20px;
 	margin: 0 auto;
+	justify-content: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 /*chairs*/
@@ -506,22 +510,26 @@ a
 .committees
 {
 	width: 100%;
-	margin: 0 auto;
-	margin-left: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .members
 {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: auto auto auto;
+	text-align: center;
+	justify-content: center;
 	color: #5d7032;
 }
 
 .member h2
 {
 	font-size: 24px;
-	padding: 0;
+}
+
+.member p
+{
+	padding: 5px;
 }
 
 
@@ -542,12 +550,11 @@ a
 	margin: 0 auto;
 }
 
-#aboutImageCon
+.aboutImageCon
 {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+	width: 206px;
 	margin-bottom: 20px;
+	margin: 0 auto;
 }
 
 #about1TextCon
@@ -575,12 +582,11 @@ a
 	margin-bottom: 25px;
 }
 
-#about2ImageCon 
+.about2ImageCon 
 {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	margin-right: 20px;
+	width: 206px;
+	margin-bottom: 20px;
+	margin: 0 auto;
 }
 
 #about2TextCon 
@@ -624,15 +630,14 @@ a
 	margin: 0 auto;
 	display: grid;
 	grid-template-rows: repeat(27,100px); 
-	grid-template-columns: repeat(2, 175px);
-	grid-column-gap: 10px;
-	padding: 15px;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 5px;
+	justify-content: center;
 }
 
 #evBottom
 {
 	width: 320px;
-	padding: 15px;
 	margin: 0 auto;
 	display: grid;
 	grid-template-rows: repeat(3, auto); 
@@ -648,11 +653,10 @@ a
 
 .eventButtons
 {	
-	margin-top: 10px;
 	margin-bottom: 10px;
+	margin-top: 30px;
 	width: 70px;
-	height: 30px;
-	padding: 5px;
+	height: 35px;
 	color: #5d7032;
 	background-color: #FFF;
 	border: 1px dashed #5d7032;
@@ -734,48 +738,50 @@ a
 {
 	margin: 0 auto;
 	width: 100%;
-	text-align: left;
 	font-size: 24px;
-	padding: 10px; 
+	text-align: center;
 }
 
 #projectsCon 
 {
 	margin-top: 25px;
-	margin-bottom: 25px;
+	margin-bottom: 10px;
 	line-height: 35px;
 	width: 100%;
 	height: auto;
 	color: #5d7032;
+	display: flex;
+	flex-direction: column;
 }
 
-#projectsImageCon 
+#projectImage 
 {
-	width: 100%;
-	margin: 0 auto;
-	padding: 10px; 
+	margin-top: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	justify-content: center;
 }
 
 #projectsBottom {
-	margin-top: 25px;
-	margin-bottom: 25px;
 	width: 100%
 	height: auto;
 	color: #5d7032;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .projBottom
 {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: repeat(2, auto); 
-	margin: 0 auto;
-	padding: 10px; 
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .projBottom2 h3 
 {
-	padding: 0px !important;
+	text-align: center;
 	font-size: 30px;
 	font-weight: bold;
 }
@@ -784,9 +790,8 @@ a
 {
 	font-size: 24px;
 	line-height: 35px;
-	width: 90%;
-	grid-row: 2/-1;
-	grid-column: 1/-1;
+	justify-content: center;
+	width: 100%;
 }
 
 .projBottom2 p
@@ -797,37 +802,45 @@ a
 
 .projImgs
 {
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	justify-content: center;
 }
 
 
 #projectArchives
 {
-	width: 50%;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between; 
+	flex-direction: column;
+	justify-content: center; 
 	margin-bottom: 20px;
 	margin-left: 10px;
+}
+
+.psub
+{
+	text-align: center;
 }
 
 .buttonCon
 {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: center;
+	margin: 0 auto;
+	width: 50%;
 }
 
 .projButton
 {	
 	font-size: 20px;
 	margin-bottom: 10px;
-	width: 150px;
 	padding: 5px;
 	color: #5d7032;
 	background-color: #FFF;
+	text-align: center;
 	border: 1px dashed #5d7032;
-	margin-right: 40px;
 }
 
 .projButton a
@@ -835,8 +848,297 @@ a
 	color: #5d7032;
 }
 
+/*CONTACT US PAGE*/
+
+#contactCon
+{
+	margin-top: 25px;
+	margin-bottom: 25px;
+	width: 100%;
+	color: #5d7032;
+}
+
+#contactTop
+{
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.contImageCon
+{
+	margin: 0 auto;
+}
+
+#cont1TextCon
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+#cont1TextCon p
+{
+	width: 100%;
+	font-size: 24px;
+	text-align: center;
+	justify-content: center;
+	margin-top: 15px;
+	line-height: 35px;
+}
+
+.FbuttonCon
+{
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.Fbutton a
+{
+	font-size: 20px;
+	margin-bottom: 10px;
+	padding: 5px;
+	color: #5d7032;
+	background-color: #FFF;
+	text-align: center;
+	border: 1px dashed #5d7032;
+}
+
+.subtitle1 p
+{
+	text-indent: 0px;
+	font-size: 30px;
+	font-weight: bold;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+#cont2
+{
+	color: #5d7032;
+	width: 100%;
+	height: auto;
+	margin-top: 25px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+#cont2TextCon 
+{
+	margin-top: 10px;
+	margin-bottom: 10px; 
+	line-height: 35px;
+}
+
+#cont2TextCon p 
+{
+	font-size: 24px;
+	font-family: 'Noto Sans JP', sans-serif;
+	line-height: 35px;
+	margin-bottom: 10px;
+}
+
+#contactForm
+{
+	margin: 0 auto;
+	height: auto;
+	width: 50%;
+	padding: 10px;
+	background-color: #d9bb9a;
+	color: #915d4a;
+}
+
+input[ type=text ], input[ type=email ], select, textarea
+{
+	width: 100%;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	margin-top: 5px;
+	resize: vertical;
+}
+
+input [ type=text ], select, textarea, #message
+{
+	padding-bottom: 100px;
+}
+
+input [ type=submit ]
+{
+	padding: 5px;
+}
+
+/*membership section*/
+
+#memberCon
+{
+	margin-top: 25px;
+	margin: 0 auto;
+	margin-bottom: 25px;
+	width: 100%;
+	height: auto;
+	color: #5d7032;
+}
+
+#memberTop
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	margin: 0 auto;
+}
+
+#memImageCon
+{
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#memTextCon
+{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 20px;
+	line-height: 35px;
+}
+
+#memTextCon p
+{
+	text-indent: 25px;
+	font-size: 24px;
+}
+
+.memsub
+{
+	width: 100%;
+	text-align: center;
+}
+
+.deal
+{
+	font-weight: bold;
+	font-size: 24px;
+}
+
+/*MORE*/
+
+#newsCon
+{
+	margin-top: 25px;
+	margin-bottom: 25px;
+	width: 100%;
+	height: auto;
+	color: #5d7032;
+	display: flex;
+	flex-direction: column;
+}
+
+#newsCon a
+{
+	text-decoration: none;
+	color: #5d7032;
+	font-size: 30px;
+	padding: 10px;
+}
+
+#newsletter
+{
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#news1TextCon
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+#news1TextCon p
+{
+	font-size: 24px;
+	margin-top: 15px;
+	line-height: 30px;
+	text-align: center;
+}
+
+#subtitle p
+{
+	text-indent: 0px;
+	width: 50%;
+	font-size: 30px;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+#newsletters
+{
+	width: 100%;
+	text-align: center;
+	height: auto;
+	margin: 0 auto;
+}
+
+#newsletters ol
+{
+	width: 100%;
+	list-style: none; 
+}
+
+#newsletters ul a
+{
+	list-style: none; 
+	text-align: center;
+	font-weight: normal;
+}
+
+#newsletters ul li a:hover
+{
+	padding-left: 40px;
+}
+
+
 /*MEDIA QUERIES*/
+@media screen and (min-width: 600px;) {
+	
+	.tabImg
+	{
+		display: block;
+	}
+
+	.web
+	{
+		display: block;
+	}
+
+	.mobileImgs
+	{
+		display: none;
+	}
+
+
+}
+
 @media screen and (min-width: 960px) {
+
+#siteContainer
+{
+	max-width: 1400px;
+}
 
 .web
 {
@@ -1335,7 +1637,7 @@ a
 	margin: 0 auto;
 }
 
-#aboutImageCon
+.aboutImageCon
 {
 	display: flex;
 	flex-direction: column;
@@ -1370,7 +1672,7 @@ a
 	margin-bottom: 25px;
 }
 
-#about2ImageCon 
+.about2ImageCon 
 {
 	display: flex;
 	flex-direction: column;
@@ -1414,7 +1716,7 @@ a
 	margin: 0 auto;
 }
 
-#contImageCon
+.contImageCon
 {
 	display: flex;
 	flex-direction: column;
@@ -1744,7 +2046,8 @@ input [ type=text ], select, textarea, #message
 #newsletters ol
 {
 	width: 415px;
-	list-style: none; 
+	list-style: none;
+	text-align: left;
 }
 
 #newsletters ul
@@ -1752,7 +2055,7 @@ input [ type=text ], select, textarea, #message
 	list-style: none;
 	padding-left: 40px; 
 	text-align: left;
-	
+	display: block;
 }
 
 #newsletters ul li a
@@ -1971,7 +2274,7 @@ input [ type=text ], select, textarea, #message
 	line-height: 27px;
 }
 
-} /*end web media query1*/
+} /*end web media query 1*/
 
 /*WEB MEDIA QUERY 2*/
 @media screen and (min-width: 1050px) {

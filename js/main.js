@@ -12,10 +12,9 @@
 		burgerCon.classList.toggle("slideToggle");
 		button.classList.toggle("expanded");
 	}
+	
+button.addEventListener("click", hamburgerMenu, false);
 
-	button.addEventListener("click", hamburgerMenu, false);
-		
 })();
-
 
 })();
