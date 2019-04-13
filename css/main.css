@@ -168,7 +168,7 @@ a
   display: none;
 }
 
-#burgerCon.slideToggle
+#burgerCon.open
 {
   display: block;
 }
@@ -1097,16 +1097,40 @@ input [ type=text ], select, textarea, #message
 	list-style: none; 
 }
 
+.toggle
+{
+	font-size: 24px;
+	font-weight: bold;
+	width: 100%;
+	list-style: none; 
+}
+
+.toggle:after
+{
+	content: " - Open";
+}
+
+.toggle.clicked:after
+{
+	content: " - Close";
+}
+
+.toggled
+{
+	display: none;
+}
+
+.toggled.opened
+{
+	display: block;
+}
+
 #newsletters ul a
 {
 	list-style: none; 
 	text-align: center;
+	font-size: 20px;
 	font-weight: normal;
-}
-
-#newsletters ul li a:hover
-{
-	padding-left: 40px;
 }
 
 /*PROJ TEMPLATE PAGE*/
@@ -1298,6 +1322,8 @@ input [ type=text ], select, textarea, #message
 		width: 80%;
 		margin: 0 auto;
 	}
+
+	/*ABOUT*/
 	
 	#about
 	{
@@ -1367,6 +1393,50 @@ input [ type=text ], select, textarea, #message
 		margin-bottom: 10px;
 		line-height: 35px;
 		text-indent: 25px;
+	}
+
+	/*EVENTS*/
+	
+	.eventBox
+	{
+		width: 320px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-rows: 175px 150px 100px 175px 150px 100px 175px 150px 100px 175px 150px 100px 175px 150px 100px 175px 150px 100px 175px 150px 100px 175px 150px 100px 175px 150px 100px; 
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap: 5px;
+		justify-content: center;
+	}
+	
+	#evBottom
+	{
+		width: 320px;
+		display: grid;
+		grid-template-rows: repeat(3, auto); 
+		grid-template-columns: repeat(2, auto);
+		grid-column-gap: 10px; 
+		grid-row-gap: 10px;
+		justify-content: center;
+	}
+
+	/*PROJECTS*/
+	.projectImageCon
+	{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 0 auto;
+		padding: 10px;
+	}
+
+	.project2ImageCon
+	{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%
+		margin: 0 auto;
+		padding: 10px;
 	}
 
 
@@ -2512,6 +2582,7 @@ input [ type=text ], select, textarea, #message
 	width: 960px;
 	height: auto;
 	color: #5d7032;
+	text-align: left;
 }
 
 .project1
@@ -2543,6 +2614,7 @@ input [ type=text ], select, textarea, #message
 {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	margin-left: 30px;
 	width: 400px;
 	margin-bottom: 20px;
@@ -2570,7 +2642,7 @@ input [ type=text ], select, textarea, #message
 	color: #5d7032;
 	display: flex;
 	flex-direction: row;
-	width: 975px;
+	width: 960px;
 	height: auto;
 	margin-top: 25px;
 	margin-bottom: 25px;
@@ -2584,12 +2656,12 @@ input [ type=text ], select, textarea, #message
 	margin-right: 20px;
 }
 
-
 .project2TextCon 
 {
 	margin-top: 15px;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	margin-left: 50px;
 	margin-top: 10px;
 	margin-bottom: 20px; 
@@ -2600,7 +2672,7 @@ input [ type=text ], select, textarea, #message
 	font-size: 24px;
 	font-family: 'Noto Sans JP', sans-serif;
 	margin-right: 50px;
-	line-height: 27px;
+	line-height: 30px;
 }
 
 } /*end web media query 1*/

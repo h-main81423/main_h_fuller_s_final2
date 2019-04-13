@@ -17,12 +17,11 @@ Needed resources:
 
 ## Looks of Website
 
-*Hoping to make the website feel earthy and welcoming, not too overwhelming with the colours or graphics.*
+*We want to ensure that viewers of the website enjoy what they're seeing, but keep it professional. We are aware the demographic is going to likely be older people, so the typography of the site should be relatively large in order to encompass that accessibility to the right groups.*
 
+*It's not hard to see that the site views memberships and fundraising as very very *
 **BE CONSISTENT**
-
 *Blurbs to hold content*
-
 *Better organization*
 
 ## Process Notes
