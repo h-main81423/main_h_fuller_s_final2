@@ -7,6 +7,8 @@
 	<link href="css/main.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700" rel="stylesheet">
 	<meta name="viewport" content="width=device-width">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/ScrollToPlugin.min.js"></script>
 </head>
 <body>
 <div id="siteContainer">
@@ -52,7 +54,7 @@
 		<div class="divider"></div>
 
 		<div class="extraSpace">
-			<div id="membershipText"><h2 class="title">MEMBERSHIPS
+			<div id="membershipText"><h2 class="title memberTitle">MEMBERSHIPS
 			ARE DUE! </h2>
 			<p>You get to be a TRAA member for a whole year for only $25! Your membership also adds another voice to our efforts in protecting and enhancing aquatic habitats in the London & area community.
 			You’ve taken a lot of enjoyment from this unique fishery. It’s time to give back by being a part of the solution.</p></div>
@@ -68,12 +70,23 @@
 				<h2 class="funTitle">FUNDRAISING</h2>
 		<div  id="fundraiserText"><h3>Efforts are underway to get the funding we need to continue many of the TRAA's most vital projects:</h3></div>
 			<div id="fundraiserImgs">
-				<div class="fundraiserImg img1"><a href="projTem.html"><img src="images/fund1.png" alt="Trout Hatchery" class="web"></a></div>
-				<div class="fundraiserImg img1"><a href="projTem.html"><img src="images/fund1mob.png" alt="Trout Hatchery" class="mobileImg"></a></div>
-				<div class="fundraiserImg img2"><a href="projTem.html"><img src="images/fund2.png" alt="Salmonid Monitoring" class="web"></a></div>
-				<div class="fundraiserImg img2"><a href="projTem.html"><img src="images/fund2mob.png" alt="Salmonid Monitoring" class="mobileImg"></a></div>
-				<div class="fundraiserImg img3"><a href="projTem.html"><img src="images/fund3.png" alt="Komoka Hydrological" class="web"></a></div>
-				<div class="fundraiserImg img3"><a href="projTem.html"><img src="images/fund3mob.png" alt="Komoka Hydrological" class="mobileImg"></a></div>
+				<div class="fundraiserImg img1 web"><a href="projTem.html"><img src="images/fund1.png" alt="Trout Hatchery" class="web"></a></div>
+
+				<div class="fundraiserImg img1 mobileImg"><a href="projTem.html"><img src="images/fund1mob.png" alt="Trout Hatchery" class="mobileImg"></a></div>
+
+				<div class="fundraiserImg img1 tabImg"><a href="projTem.html"><img src="images/fund1tab.png" alt="Trout Hatchery" class="tabImg"></a></div>
+
+				<div class="fundraiserImg img2 web"><a href="projTem.html"><img src="images/fund2.png" alt="Salmonid Monitoring" class="web"></a></div>
+
+				<div class="fundraiserImg img2 mobileImg"><a href="projTem.html"><img src="images/fund2mob.png" alt="Salmonid Monitoring" class="mobileImg"></a></div>
+
+				<div class="fundraiserImg img2 tabImg"><a href="projTem.html"><img src="images/fund2tab.png" alt="Salmonid Monitoring" class="tabImg"></a></div>
+
+				<div class="fundraiserImg img3 web"><a href="projTem.html"><img src="images/fund3.png" alt="Komoka Hydrological" class="web"></a></div>
+
+				<div class="fundraiserImg img3 mobileImg"><a href="projTem.html"><img src="images/fund3mob.png" alt="Komoka Hydrological" class="mobileImg"></a></div>
+
+				<div class="fundraiserImg img3 tabImg"><a href="projTem.html"><img src="images/fund3tab.png" alt="Komoka Hydrological" class="tabImg"></a></div>
 			</div>
 				<div class="fundraiserTitle"><p>Improvements to the TRAA Trout Hatchery</p>
 				<p>Continuation of the Salmonid Monitoring Program</p>
@@ -92,8 +105,9 @@
 			 <div class="announcements">
 				<div class="announcementImg"><img src="images/ann1.png" alt="fishing" class="web">
 				<img src="images/ann1mob.png" alt="fishing" class="mobileImg">
+				<img src="images/ann1tab.png" alt="fishing" class="tabImg">
 				</div>
-				<div class="subtitle">
+				<div class="subtitle announcementTitle">
 					<h2>TRAA General Meeting 7:00PM - Wednesday, January 9, 2019</h2>
 				</div>
 				<div class="announcement">
@@ -106,9 +120,10 @@
 			</div>
 
 				<div class="announcements">
-				<div class="announcementImg"><img src="images/ann2.png" alt="fishing" class="web">
-				<img src="images/ann2mob.png" alt="fishing" class="mobileImg"></div>
-				<div class="subtitle">
+				<div class="announcementImg"><img src="images/ann2.png" alt="eggs" class="web">
+				<img src="images/ann2mob.png" alt="eggs" class="mobileImg">
+				<img src="images/ann2tab.png" alt="eggs" class="tabImg"></div>
+				<div class="subtitle announcementTitle">
 					<h2>TRAA Trout Hatchery: Brown Trout Eggs Arriving Soon!</h2>
 				</div>
 				<div class="announcement">
@@ -121,8 +136,9 @@
 			</div>
 				<div class="announcements">
 				<div class="announcementImg"><img src="images/ann3.png" alt="rod building" class="web">
-				<img src="images/ann3mob.png" alt="fishing" class="mobileImg"></div>
-				<div class="subtitle">
+				<img src="images/ann3mob.png" alt="rod building" class="mobileImg">
+				<img src="images/ann3tab.png" alt="rod building" class="tabImg"></div>
+				<div class="subtitle announcementTitle">
 					<h2>Rod Building - Your First Time
 					<br>7:00PM - Mondays, February 18 through March 11, 2019</h2>
 				</div>
@@ -137,8 +153,9 @@
 			</div>
 		<div class="announcements">
 				<div class="announcementImg"><img src="images/ann4.png" alt="cleanup" class="web">
-				<img src="images/ann4mob.png" alt="fishing" class="mobileImg"></div>
-				<div class="subtitle">
+				<img src="images/ann4mob.png" alt="cleanup" class="mobileImg">
+				<img src="images/ann4tab.png" alt="cleanup" class="tabImg"></div>
+				<div class="subtitle announcementTitle">
 					<h2>Stream Habitat Work Party
 					<br>Took place on Saturday, October 13, 2018</h2>
 				</div>
@@ -150,9 +167,9 @@
 			</div>
 		<div class="announcements">
 				<div class="announcementImg"><img src="images/ann5.png" alt="Merch" class="web">
-				<img src="images/ann5mob.png" alt="fishing" class="mobileImg">
-				</div>
-				<div class="subtitle">
+				<img src="images/ann5mob.png" alt="merch" class="mobileImg">
+				<img src="images/ann5tab.png" alt="merch" class="tabImg"></div>
+				<div class="subtitle announcementTitle">
 					<h2>TRAA Gear is now available!
 					<br>Tee shirts, hats and stickers.</h2>
 				</div>
@@ -166,11 +183,10 @@
 					<p>Get your TRAA Gear (makes a great Christmas gift!) at any TRAA event, such as this coming General Meeting.</p>
 				</div>
 			</div>
-		</div> 
+		</div>
 
 	<div class="divider"></div>
 
-	<div class="extraSpace">
 		<div id="businesses">
 			<div class="title">
 				<h2>LOCAL BUSINESSES STEP UP TO HELP OUT THE TRAA</h2>
@@ -182,6 +198,7 @@
 				<div class="businessesImg">
 					<img src="images/bus1.png" alt="Melchers logo" class="web">
 					<img src="images/bus1mob.png" alt="Melchers logo" class="mobileImg">
+					<img src="images/bus1tab.png" alt="Melchers logo" class="tabImg">
 				</div>
 				<div class="businessText">
 					<p>Over the past couple of years the folks at Melchers Construction Ltd have offered up their beautiful boardroom for TRAA executive meetings. It's an ideal space with all the amenities required for us to accomplish all the "behind the scenes" work of the TRAA. Many thanks go out to the continued support of Melchers Construction Ltd.</p>
@@ -192,6 +209,7 @@
 				<div class="businessesImg">
 					<img src="images/bus2.png" alt="Guillevin Greentech logo" class="web">
 					<img src="images/bus2mob.png" alt="Melchers logo" class="mobileImg">
+					<img src="images/bus2tab.png" alt="Melchers logo" class="tabImg">
 				</div>
 				<div class="businessText">
 					<p>Members of the trout hatchery rotation know the woes we've had with lighting in the hatchery. Even with larger fixtures installed a few years ago, it was still frustrating on days when the mercury dipped below -15C and the fluorescent technology just teased us with its dull flicker. Enter Mike Jeffries of Guillevin Greentech in London with nice set of bright and dependable (and new!) LED fixtures. Once they were installed it was like working in well-appointed laboratory.</p>
@@ -201,7 +219,8 @@
 			<div class="businesses">
 				<div class="businessesImg">
 					<img src="images/bus3.png" alt="Muma Manufacturing logo" class="web">
-					<img src="images/bus3mob.png" alt="Melchers logo" class="mobileImg">
+					<img src="images/bus3mob.png" alt="Muma Manufacturing logo" class="mobileImg">
+					<img src="images/bus3tab.png" alt="Muma Manufacturing logo" class="tabImg">
 				</div>
 				<div class="businessText">
 					<p>The TRAA voted unanimously to re-name the TRAA trout hatchery honouring Keith Wales' memory and his unselfish support of the TRAA's work in the London area, in particular Komoka Creek. Special thanks go out to Muma Manufacturing in St. Thomas for donating the beautiful laser-cut aluminum sign.</p>
@@ -211,7 +230,9 @@
 			<div class="businesses">
 				<div class="businessesImg">
 					<img src="images/bus4.png" alt="Try Recycling Logo" class="web">
-					<img src="images/bus4mob.png" alt="Melchers logo" class="mobileImg">
+					<img src="images/bus4mob.png" alt="Try Recycling logo" class="mobileImg">
+					<img src="images/bus4tab.png" alt="Try Recycling logo" class="tabImg">
+
 				</div>
 				<div class="businessText">
 					<p>After cleaning up the area around the TRAA shed and trout hatchery, our trailer was quite full and needed to be emptied. A big 'thank you' goes out to Rick Vandersluis and Mike Seabrook of Try Recycling who allowed the TRAA to empty the trailer at their facility free of charge.</p>
@@ -221,7 +242,8 @@
 			<div class="businesses">
 				<div class="businessesImg">
 					<img src="images/bus5.png" alt="Angling Sports Logo" class="web">
-					<img src="images/bus5mob.png" alt="Melchers logo" class="mobileImg">
+					<img src="images/bus5mob.png" alt="Angling Sports logo" class="mobileImg">
+					<img src="images/bus5tab.png" alt="Angling Sports logo" class="tabImg">
 				</div>
 				<div class="businessText">
 					<p>Before we could take the trailer to Try Recycling, we needed to get the spare tire for the trailer fixed. Pat Devincenzo, proprietor of Angling Sports, offered to get it repaired. Turns out the tire needed replacing and Pat took care of it.
@@ -230,14 +252,13 @@
 				</div>
 			</div>
 		</div>
-	</div>
 
 	<div class="divider"></div>
 
 <div class="extraSpace">
 	<div class="committee">
 		<div class="title">
-			<h2 class="title">TRAA EXECUTIVES</h2>
+			<h2 class="title committee">TRAA EXECUTIVES</h2>
 		</div>
 		
 		<div class="committees">
@@ -256,7 +277,7 @@
 <div class="extraSpace">
 	<div class="committee">
 
-			<h2 class="title">TRAA VOLUNTEER COMMITTEE CHAIRS</h2>
+			<h2 class="title committee">TRAA VOLUNTEER COMMITTEE CHAIRS</h2>
 
 		<div class="committees">
 			<div class="members">
@@ -291,7 +312,8 @@
 </div>
 
 
-	<div class="divider"></div>
+	<div class="divider mobileImg"></div>
+	<div class="divider tabImg"></div>
 
 	<div id="footer">
 		<div id="footerNav">
@@ -303,7 +325,7 @@
 				<li><a href="contact.html">Contact Us</a></li>
 				<li><a href="more.html">More</a></li>
 				<li class="FButton"><a href="#">Return To Top</a></li>
-				<li><form><input type="search" placeholder="Search..."></form></li>
+				<li><form><input type="search" placeholder="Search..." class="search"></form></li>
 				<li><button class="sbutton">Search</button></li>
 				</ul>
 		</div>
@@ -312,8 +334,6 @@
 			<button id="return">Return to Top</button>
 		</div>
 	</div>
-
-</div>
 
 	<!-- Content goes here -->
 		<script src="js/main.js"></script>

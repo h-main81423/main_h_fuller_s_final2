@@ -168,7 +168,7 @@ a
   display: none;
 }
 
-#burgerCon.slideToggle
+#burgerCon.open
 {
   display: block;
 }
@@ -198,7 +198,7 @@ a
   justify-content: center;
 }
 
-#mobileFoot button
+#mobileFoot button 
 {
   height: 40px;
   width: 100px;
@@ -211,7 +211,6 @@ a
   margin-left: 10px;
   margin-top: 5px;
 }
-
 
 #membershipText
 {	
@@ -318,11 +317,6 @@ a
 	grid-row: 4/7;
 	text-align: center;
 	line-height: 25px;
-
-}
-
-.fundraiserTitle p
-{
 
 }
 
@@ -952,8 +946,8 @@ a
 	height: auto;
 	width: 50%;
 	padding: 10px;
-	background-color: #d9bb9a;
-	color: #915d4a;
+	background-color: #cedcad;
+	color: #5d7032;
 }
 
 input[ type=text ], input[ type=email ], select, textarea
@@ -973,9 +967,12 @@ input [ type=text ], select, textarea, #message
 	padding-bottom: 100px;
 }
 
-input [ type=submit ]
+.submit
 {
 	padding: 5px;
+	color: #5d7032;
+	border: dashed 1px #5d7032;
+	background-color: #FFF;
 }
 
 /*membership section*/
@@ -1099,51 +1096,445 @@ input [ type=submit ]
 	list-style: none; 
 }
 
+#newsletters ol li
+{
+	padding: 10px;
+}
+
+.toggle
+{
+	font-size: 24px;
+	font-weight: bold;
+	width: 100%;
+	list-style: none; 
+	background-color: #cedcad;
+}
+
+.toggle:after
+{
+	content: " +";
+}
+
+.toggle.clicked:after
+{
+	content: " -";
+}
+
+.toggled
+{
+	display: none;
+}
+
+.toggled.opened
+{
+	display: block;
+}
+
 #newsletters ul a
 {
 	list-style: none; 
 	text-align: center;
+	font-size: 20px;
 	font-weight: normal;
 }
 
-#newsletters ul li a:hover
+/*PROJ TEMPLATE PAGE*/
+.project
 {
-	padding-left: 40px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	height: auto;
+	color: #5d7032;
+}
+
+.project1
+{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.projectImageCon
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.projimage
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 200px;
+	height: 175px;
+	background-color: #333; 
+}
+
+.project1TextCon
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.project1TextCon p
+{
+	margin-top: 15px;
+	text-indent: 10px;
+	font-size: 24px;
+	line-height: 30px;
+}
+
+#subtitle p
+{
+	text-indent: 0px;
+	width: 450px;
+	font-size: 30px;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+	
+.project2
+{
+	color: #5d7032;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+	height: auto;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.project2ImageCon 
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+
+.project2TextCon 
+{
+	margin-top: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 10px;
+	margin-bottom: 20px; 
+}
+
+.project2TextCon p 
+{
+	width: 100%;
+	font-size: 24px;
+	font-family: 'Noto Sans JP', sans-serif;
+	margin-right: 50px;
+	line-height: 27px;
 }
 
 
 /*MEDIA QUERIES*/
-@media screen and (min-width: 600px;) {
+
+/*LARGE MOBILE*/
+@media screen and (min-width: 425px) {
 	
+	#heroSlogan p
+	{
+		margin-bottom: 250px;
+	}
+}
+
+
+/*TABLET*/
+@media screen and (min-width: 600px) {
+	
+	/*ALL PAGES*/
 	.tabImg
 	{
 		display: block;
 	}
 
-	.web
-	{
-		display: block;
-	}
-
-	.mobileImgs
+	.mobileImg
 	{
 		display: none;
+		width: 0px;
+		height: 0px;
+	}
+
+	#fundraiser
+	{
+		width: 600px;
+		height: auto;
+		margin: 0 auto;
+		font-size: 30px;
+		color: #5d7032;
+		font-family: 'Noto Sans JP', sans-serif;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 30px 150px 150px 150px 150px;
+		grid-row-gap: 20px; 
+		grid-column-gap: 10px;
+	}
+
+	#fundraiser p
+	{
+		font-size: 24px;
+		line-height: 35px;
+		text-align: center;
+		grid-column: span 3;
+	}
+
+	#fundraiserImgs
+	{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		grid-row: 3/5;
+		grid-column: 1/-1;
+	}
+
+	.fundraiserImg.img1
+	{
+		margin-left: 10px;
+	}
+
+	/*getting rid of images that are still displaying in DOM for some reason*/
+	.fundraiserImg.img1.mobileImg { display: none; } .fundraiserImg.img1.web { display: none; }
+	.fundraiserImg.img2.mobileImg { display: none; } .fundraiserImg.img2.web { display: none; }
+	.fundraiserImg.img3.mobileImg { display: none; } .fundraiserImg.img3.web { display: none; }
+
+	.fundraiserTitle
+	{
+		margin: 0 auto;
+		text-align: center;
+		line-height: 35px;
+		grid-row: 4/5;
+		grid-column: 1/-1;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	#fundraiserText
+	{
+		margin: 0 auto;
+		width: 90%;
+		grid-row: 2/5;
+		grid-column: 1/-1;
+		line-height: 35px;
+	}
+
+	#fundraiserText2
+	{
+		grid-row: 5/-1;
+		grid-column: 1/-1;
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	/*HOMEPAGE*/
+	#heroSlogan p
+	{
+		margin-bottom: 275px;
+	}
+		
+	#announcements
+	{
+		width: 100%;
+		box-sizing: content-box;
+		height: auto;
+		color: #5d7032;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.announcements
+	{	
+		margin: 0 auto;
+		width: 100%;
+		font-family: 'Noto Sans JP', sans-serif;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.announcement 
+	{	
+		width: 90%;
+		margin: 0 auto;
+		font-size: 20px;
+		text-indent: 25px;
+		line-height: 35px;
+	}
+
+	.announcementTitle
+	{
+		font-size: 24px;
+		text-indent: 0px;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	.announcementImg
+	{
+		margin: 0 auto;
+		width: 100%;
+		
+	}
+
+	/*ABOUT*/
+	
+	#about
+	{
+		margin-top: 25px;
+		margin-bottom: 25px;
+		width: 100%;
+		height: auto;
+		color: #5d7032;
+	}
+
+	#about1
+	{
+		width: 90%;
+	}
+
+	.aboutImageCon
+	{
+		width: 310px;
+	}
+
+	#about1TextCon
+	{
+		display: flex;
+		padding: 10px;
+		flex-direction: column;
+		margin-bottom: 20px;
+	}
+
+	#about1TextCon p
+	{
+		font-size: 24px;
+		padding-left: 10px; 
+		margin-bottom: 20px;
+		line-height: 35px;
+	}
+		
+	#about2
+	{
+		color: #5d7032;
+		width: 90%;
+		height: auto;
+		margin-top: 25px;
+		margin-bottom: 25px;
+		margin: 0 auto;
+	}
+
+	.about2ImageCon 
+	{
+		width: 310px;
+		margin-bottom: 20px;
+		margin: 0 auto;
+	}
+
+	#about2TextCon 
+	{
+		display: flex;
+		flex-direction: column;
+		padding: 10px;
+		margin: 0 auto; 
+	}
+
+	#about2TextCon p 
+	{
+		font-size: 24px;
+		font-family: 'Noto Sans JP', sans-serif;
+		margin-right: 25px;
+		margin-bottom: 10px;
+		line-height: 35px;
+		text-indent: 25px;
+	}
+
+	/*EVENTS*/
+	
+	.eventBox
+	{
+		width: 320px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-rows: 175px 150px 100px 175px 150px 100px 175px 150px 100px 175px 150px 100px 175px 150px 100px 175px 150px 100px 175px 150px 100px 175px 150px 100px 175px 150px 100px; 
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap: 5px;
+		justify-content: center;
+	}
+	
+	#evBottom
+	{
+		width: 320px;
+		display: grid;
+		grid-template-rows: repeat(3, auto); 
+		grid-template-columns: repeat(2, auto);
+		grid-column-gap: 10px; 
+		grid-row-gap: 10px;
+		justify-content: center;
+	}
+
+	/*PROJECTS*/
+	.projectImageCon
+	{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 0 auto;
+		padding: 10px;
+	}
+
+	.project2ImageCon
+	{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%
+		margin: 0 auto;
+		padding: 10px;
 	}
 
 
-}
+} /*end tablet query*/
 
 @media screen and (min-width: 960px) {
 
 #siteContainer
 {
 	max-width: 1400px;
+	margin: 0 auto;
+	justify-content: center;
 }
 
 .web
 {
 	display: block;
 }
+
+.fundraiserImg.img1.web { display: block; }
+.fundraiserImg.img2.web { display: block; }
+.fundraiserImg.img3.web { display: block; }
+
+.tabImg
+{
+	display: none;
+}
+
+.fundraiserImg.img1.tabImg { display: none; }
+.fundraiserImg.img2.tabImg { display: none; }
+.fundraiserImg.img3.tabImg { display: none; }
 
 #burger
 {
@@ -1181,6 +1572,7 @@ input [ type=submit ]
 .title
 {
 	font-family: 'Noto Sans JP', sans-serif;
+	width: 100%;
 	color: #5d7032;
 	font-size: 36px;
 	margin-top: 5px; 
@@ -1262,6 +1654,11 @@ input [ type=submit ]
 	color: #FFF;
 }
 
+#burgerCon ul li a:active {
+	color: #FFF;
+	background-color: #cedcad;
+}
+
 #burgerCon
 {
 	display: flex;
@@ -1308,18 +1705,25 @@ input [ type=submit ]
 	padding: 10px; 
 }
 
+.memberTitle
+{
+	width: 940px;
+	padding: 10px;
+
+}
+
 #fundraiser
 {
-	width: 960px;
+	width: 90%;
 	height: auto;
 	font-size: 30px;
 	color: #5d7032;
 	font-family: 'Noto Sans JP', sans-serif;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 30px 100px 175px 100px;
+	grid-template-rows: 30px 150px 175px 100px 125px;
 	grid-column-gap: 50px;
-	grid-row-gap: 20px; 
+	grid-row-gap: 10px; 
 }
 
 #fundraiser p
@@ -1333,31 +1737,36 @@ input [ type=submit ]
 
 #fundraiserImgs
 {
-	width: 90%;
+	width: 100%;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-around;
 	grid-row: 3/5;
-	grid-column: 1/-1
+	grid-column: 1/-1;
 }
 
 .fundraiserImg
 {
-	width: 225px;
-	height: 175px;
+	margin-left: 0px !important;
 }
 
 .fundraiserTitle
 {
 	margin: 0 auto;
+	width: 100%;
 	text-align: center;
 	line-height: 35px;
 	grid-row: 4/5;
 	grid-column: 1/-1;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-around;
+}
+
+.fundraiserTitle p
+{
+	justify-content: center;
 }
 
 #fundraiserText
@@ -1429,17 +1838,36 @@ input [ type=submit ]
 	color: #FFF;
 }
 
+#footerNav ul li a:active {
+	color: #FFF;
+	background-color: #cedcad;
+}
+
+.search
+{
+  display: block;
+  width: 75%;
+  height: 20px;
+  padding: 5px;
+  margin-left: 30px;
+  border: 1px solid #333;
+  border-radius: 3px 0px 3px 0px;
+  background-color: #fefefe;
+  box-shadow: inset 0 1px 2px rgba(10,10,10, 0.1);
+  color: #0a0a0a;
+}
+
 .sbutton
 {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b2c584+0,cced87+100 */
-	background: #b2c584; /* Old browsers */
-    background: -moz-linear-gradient(top, #b2c584 0%, #cced87 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #b2c584 0%,#cced87 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #b2c584 0%,#cced87 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2c584', endColorstr='#cced87',GradientType=0 ); /* IE6-9 */
-	box-shadow: 2px 1px 18px #a6b87b;
-	border-radius: 10px;
-	padding: 5px;
+  height: 25px;
+  width: 100px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 14px;
+  background-color: #5d7032;
+  color: #FFF;
+  border: 0;
+  margin-left: 5px;
 }
 
 /*INDEX PAGE*/
@@ -1455,6 +1883,7 @@ input [ type=submit ]
 	height: 400px;
 	width: 960px;
 	margin: 0 auto;
+	margin-top: 25px;
 	background-image: linear-gradient(rgba(255, 255, 204, 0.13), rgba(0, 0, 0, 0)), url("../images/hero.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
@@ -1475,13 +1904,18 @@ input [ type=submit ]
 	color: #FFF;
 }
 
+#heroSlogan p
+{
+	margin-bottom: 300px;
+}
+
 #heroText
 {
 	width: 960px;
 	height: 75px;
 	margin: 0 auto;
 	margin-top: 25px;
-	margin-bottom: 25px;
+	padding-bottom: 35px;
 	text-align: center;
 	font-family: 'Noto Sans JP', sans-serif;
 	line-height: 35px;
@@ -1510,34 +1944,43 @@ input [ type=submit ]
 	width: 960px;
 	height: auto;
 	color: #5d7032;
+
 }
 
 .announcements
 {	
 	width: 940px;
 	padding: 10px;
-	margin-left: 30px;
 	font-family: 'Noto Sans JP', sans-serif;
 	display: grid;
-	grid-gap: 40px;
-	grid-template-columns: 300px 1fr;
+	grid-gap: 20px;
+	grid-template-columns: 1fr 1fr;
+	justify-content: center;
 	grid-template-rows: 300px auto;
 }
 
 .announcement
 {	
-	margin-left: 40px;
 	font-size: 22px;
-	text-indent: 25px;
 	line-height: 35px;
+}
+
+.announcement p
+{
+	text-indent: 20px;	
+	margin-bottom: 5px;
 	grid-column: 1/-1;
 	grid-row: 2/-1;
 }
 
-.announcement h2
+.announcementTitle
 {
 	font-size: 24px;
 	font-weight: bold;
+	text-align: left;
+	margin: 0px;
+	grid-column: 2/-1;
+	grid-row: 1/3;
 }
 
 .announcementImg
@@ -1545,12 +1988,14 @@ input [ type=submit ]
 	width: 300px;
 	height: 300px;
 	margin-top: 10px;
+	grid-column: 1/2;
 }
 
 #businesses
 {
 	margin-top: 25px;
 	margin-bottom: 25px;
+	margin: 0 auto;
 	width: 960px;
 	height: auto;
 	color: #5d7032;
@@ -1570,6 +2015,11 @@ input [ type=submit ]
 	text-indent: 20px;
 	font-size: 22px;
 	line-height: 35px;
+}
+
+.businessText h3
+{
+	width: 100%;
 }
 
 .businessesImg
@@ -1600,6 +2050,11 @@ input [ type=submit ]
 	justify-content: space-evenly;
 }
 
+.title.committee
+{
+	width: 940px;
+}
+
 .members 
 {
 	margin: 0 auto;
@@ -1625,15 +2080,17 @@ input [ type=submit ]
 {
 	margin-top: 25px;
 	margin-bottom: 25px;
-	width: 975px;
+	margin: 0 auto;
+	width: 960px;
 	height: auto;
 	color: #5d7032;
 }
 
 #about1
 {
-	width: 975px;
+	width: 960px;
 	display: flex;
+	justify-content: center;
 	margin: 0 auto;
 }
 
@@ -1666,7 +2123,7 @@ input [ type=submit ]
 {
 	color: #5d7032;
 	display: flex;
-	width: 975px;
+	width: 960px;
 	height: auto;
 	margin-top: 25px;
 	margin-bottom: 25px;
@@ -1705,14 +2162,15 @@ input [ type=submit ]
 {
 	margin-top: 25px;
 	margin-bottom: 25px;
-	width: 975px;
+	width: 960px;
 	color: #5d7032;
 }
 
 #contactTop
 {
-	width: 975px;
+	width: 960px;
 	display: flex;
+	flex-direction: row;
 	margin: 0 auto;
 }
 
@@ -1727,7 +2185,6 @@ input [ type=submit ]
 {
 	display: flex;
 	flex-direction: column;
-	margin-left: 30px;
 	margin-bottom: 20px;
 }
 
@@ -1736,6 +2193,14 @@ input [ type=submit ]
 	font-size: 24px;
 	margin-top: 15px;
 	line-height: 35px;
+	text-align: left;
+}
+
+.FbuttonCon
+{
+	width: 50%;
+	margin: 0 auto;
+	padding-top: 45px;
 }
 
 .button
@@ -1770,7 +2235,7 @@ input [ type=submit ]
 #cont2
 {
 	color: #5d7032;
-	width: 975px;
+	width: 960px;
 	height: auto;
 	margin-top: 25px;
 }
@@ -1778,11 +2243,11 @@ input [ type=submit ]
 #contactForm
 {
 	margin: 0 auto;
-	height: 370px;
+	height: auto;
 	width: 500px;
 	padding: 10px;
-	background-color: #d9bb9a;
-	color: #915d4a;
+	background-color: #cedcad;
+	color: #5d7032;
 }
 
 #cont2TextCon 
@@ -1821,6 +2286,14 @@ input [ type=text ], select, textarea, #message
 	padding-bottom: 100px;
 }
 
+.submit
+{
+	padding: 5px;
+	color: #5d7032;
+	border: dashed 1px #5d7032;
+	background-color: #FFF;
+}
+
 /*membership section*/
 
 #memberCon
@@ -1837,6 +2310,7 @@ input [ type=text ], select, textarea, #message
 {
 	width: 960px;
 	display: flex;
+	flex-direction: row;
 	margin: 0 auto;
 }
 
@@ -1851,20 +2325,28 @@ input [ type=text ], select, textarea, #message
 #memTextCon
 {
 	font-size: 24px;
-	padding-left: 30px;
+	padding-left: 10px;
 	margin-bottom: 20px;
 	line-height: 35px;
 }
 
 #memTextCon p
 {
-	text-indent: 25px;
+	text-indent: 20px;
+	text-align: left;
+}
+
+.memsub
+{
+	text-align: left;
 }
 
 .deal h3
 {
 	font-weight: bold;
 	font-size: 24px;
+	text-indent: 0px;
+	text-align: left;
 }
 
 /*PAST EVENTS*/
@@ -1873,31 +2355,32 @@ input [ type=text ], select, textarea, #message
 {
 	margin-top: 25px;
 	margin-bottom: 25px;
-	width: 975px;
+	width: 960px;
 	height: auto;
 	color: #5d7032;
 }
 
 .eventBox
 {
-	width: 975px;
+	width: 940px;
 	padding-top: 15px;
-	margin-left: 50px;
+	margin: 0px;
 	display: grid;
+	justify-content: center;
 	grid-template-rows: repeat(18, 125px); 
 	grid-template-columns: repeat(3, 225px);
-	grid-column-gap: 100px; 
+	grid-column-gap: 75px; 
 	grid-row-gap: 10px;
 }
 
 #evBottom
 {
-	margin-left: 225px;
 	padding-top: 15px;
 	display: grid;
 	grid-template-rows: auto; 
+	justify-content: center;
 	grid-template-columns: repeat(2, 225px);
-	grid-column-gap: 100px; 
+	grid-column-gap: 75px; 
 	grid-row-gap: 10px;
 }
 
@@ -1987,24 +2470,35 @@ input [ type=text ], select, textarea, #message
 {
 	margin-top: 25px;
 	margin-bottom: 25px;
-	width: 975px;
+	width: 100%;
 	height: auto;
 	color: #5d7032;
 }
 
-#newsletter
+#newsCon a
 {
-	width: 975px;
-	display: flex;
-	margin: 0 auto;
+	text-decoration: none;
+	color: #5d7032;
+	font-size: 30px;
+	padding: 10px;
 }
 
+#newsletter
+{
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+}
 
 #news1TextCon
 {
 	display: flex;
 	flex-direction: column;
-	width: 400px;
+	justify-content: center;
+	width: 100%;
 	margin-bottom: 20px;
 }
 
@@ -2012,65 +2506,76 @@ input [ type=text ], select, textarea, #message
 {
 	font-size: 24px;
 	margin-top: 15px;
-	margin-left: 10px;
 	line-height: 30px;
-	text-indent: 10px;
+	text-align: center;
 }
 
 #subtitle p
 {
 	text-indent: 0px;
-	width: 400px;
+	width: 50%;
 	font-size: 30px;
 	font-family: 'Noto Sans JP', sans-serif;
 }
 
 #newsletters
 {
-	width: 415px;
+	width: 100%;
+	text-align: center;
 	height: auto;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e6f9bc+0,bbcf8c+100 */
-    background: #e6f9bc; /* Old browsers */
-    background: -moz-linear-gradient(top, #e6f9bc 0%, #bbcf8c 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #e6f9bc 0%,#bbcf8c 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #e6f9bc 0%,#bbcf8c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6f9bc', endColorstr='#bbcf8c',GradientType=0 ); /* IE6-9 */
-	border-radius: 10px;
-	margin-left: 50px;
-	margin-top: 150px;
-	padding: 20px;
-	display: flex;
-	border: 1px #485725 dashed;
+	margin: 0 auto;
+	margin-top: 110px;
 }
 
 #newsletters ol
 {
-	width: 415px;
-	list-style: none;
-	text-align: left;
+	width: 100%;
+	list-style: none; 
 }
 
-#newsletters ul
+#newsletters ol li
 {
-	list-style: none;
-	padding-left: 40px; 
-	text-align: left;
-	display: block;
-}
-
-#newsletters ul li a
-{
-	color: #5d7032;
 	padding: 10px;
-	font-weight: bold;
-	text-decoration: none;
-	line-height: 20px;
 }
 
-#newsletters ul li a:hover
+.toggle
 {
-	color: #485725;
-	padding: 20px;
+	font-size: 24px;
+	font-weight: bold;
+	width: 100%;
+	list-style: none; 
+	background-color: #cedcad;
+}
+
+.toggle:after
+{
+	content: " +";
+}
+
+.toggle.clicked:after
+{
+	content: " -";
+}
+
+.toggled
+{
+	display: none;
+}
+
+.toggled.opened
+{
+	display: block;
+	background-color: 507032;
+	width: 100%;
+	padding: 5px;
+}
+
+#newsletters ul a
+{
+	list-style: none; 
+	text-align: center;
+	font-size: 20px;
+	font-weight: normal;
 }
 
 /* Projects Page */
@@ -2097,7 +2602,7 @@ input [ type=text ], select, textarea, #message
 	margin-top: 25px;
 	margin-bottom: 25px;
 	line-height: 35px;
-	width: 975px;
+	width: 960px;
 	height: auto;
 	color: #5d7032;
 }
@@ -2144,20 +2649,15 @@ input [ type=text ], select, textarea, #message
 	margin-bottom: 20px;
 }
 
-.projImgs
-{
-	padding: 15px;
-}
-
 
 #projectArchives
 {
-	width: 400px;
+	width: 100%;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between; 
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 auto;
 	margin-bottom: 20px;
-	margin-left: 10px;
 }
 
 .projButton
@@ -2182,15 +2682,17 @@ input [ type=text ], select, textarea, #message
 {
 	margin-top: 25px;
 	margin-bottom: 25px;
-	width: 975px;
+	width: 960px;
 	height: auto;
 	color: #5d7032;
+	text-align: left;
 }
 
 .project1
 {
-	width: 975px;
+	width: 960px;
 	display: flex;
+	flex-direction: row;
 	margin: 0 auto;
 }
 
@@ -2215,6 +2717,7 @@ input [ type=text ], select, textarea, #message
 {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	margin-left: 30px;
 	width: 400px;
 	margin-bottom: 20px;
@@ -2241,7 +2744,8 @@ input [ type=text ], select, textarea, #message
 {
 	color: #5d7032;
 	display: flex;
-	width: 975px;
+	flex-direction: row;
+	width: 960px;
 	height: auto;
 	margin-top: 25px;
 	margin-bottom: 25px;
@@ -2255,12 +2759,12 @@ input [ type=text ], select, textarea, #message
 	margin-right: 20px;
 }
 
-
 .project2TextCon 
 {
 	margin-top: 15px;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	margin-left: 50px;
 	margin-top: 10px;
 	margin-bottom: 20px; 
@@ -2271,7 +2775,7 @@ input [ type=text ], select, textarea, #message
 	font-size: 24px;
 	font-family: 'Noto Sans JP', sans-serif;
 	margin-right: 50px;
-	line-height: 27px;
+	line-height: 30px;
 }
 
 } /*end web media query 1*/
@@ -2314,7 +2818,7 @@ input [ type=text ], select, textarea, #message
 
 #mainNav {
 	height: 150px;
-	width: 1050px;
+	width: 1024px;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cedcad+0,ffffff+100 */
 	background: #cedcad; /* Old browsers */
     background: -moz-linear-gradient(top, #cedcad 0%, #ffffff 100%); /* FF3.6-15 */
@@ -2374,7 +2878,7 @@ input [ type=text ], select, textarea, #message
 
 #footer {
 	height: 50px;
-	width: 1050px;
+	width: 1024px;
 	margin: 0 auto;
 	color: #5d7032;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,cedcad+100 */
@@ -2393,7 +2897,7 @@ input [ type=text ], select, textarea, #message
 
 #footerNav ul
 {
-	width: 1050px;
+	width: 1024px;
 	display: flex;
 	height: 50px;
 }
@@ -2585,6 +3089,13 @@ input [ type=text ], select, textarea, #message
 	display: none;
 }
 
+#siteContainer
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
  #mainHeader
  {
     display: flex;
@@ -2653,7 +3164,6 @@ input [ type=text ], select, textarea, #message
 #footer {
 	height: 50px;
 	width: 1400px;
-	margin: 0 auto;
 	color: #5d7032;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,cedcad+100 */
 	background: #ffffff; /* Old browsers */
@@ -2662,6 +3172,7 @@ input [ type=text ], select, textarea, #message
     background: linear-gradient(to bottom, #ffffff 0%,#cedcad 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cedcad',GradientType=0 ); /* IE6-9 */
 	display: flex;
+	justify-content: center;
 }
 
 #footerNav
@@ -2747,25 +3258,37 @@ input [ type=text ], select, textarea, #message
 {
 	margin-top: 25px;
 	margin-bottom: 25px;
-	width: 975px;
+	margin: 0 auto;
+	width: 960px;
 	height: auto;
 	color: #5d7032;
 }
 
 .announcements
 {	
-	width: 975px;
+	width: 940px;
 	padding: 10px;
 	margin-left: 30px;
-	display: flex;
+	font-family: 'Noto Sans JP', sans-serif;
+	display: grid;
+	grid-gap: 40px;
+	grid-template-columns: 300px 1fr;
+	grid-template-rows: 300px auto;
 }
 
 .announcement
 {	
 	margin-left: 40px;
-	width: 500px;
 	font-size: 22px;
-	line-height: 40px;
+	line-height: 35px;
+	grid-column: 1/-1;
+	grid-row: 2/-1;
+}
+
+.announcement p
+{
+	text-indent: 20px;	
+	margin-bottom: 5px;
 }
 
 .announcement h2
@@ -2806,6 +3329,12 @@ input [ type=text ], select, textarea, #message
 	flex-direction: row;
 	font-size: 22px;
 	line-height: 40px;
+}
+
+.businessText h3
+{
+	width: 150%;
+	margin-left: 0px;
 }
 
 .businessesImg
