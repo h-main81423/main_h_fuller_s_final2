@@ -48,7 +48,7 @@ Needed resources:
 3. Toggle classes to set lists to display. Might have to use sibling options as well due to items being nested unordered lists inside of an ordered list. 
 4. Default behaviour should allow user to click again and close same container.
 
-####image gallery
+#### image gallery
 1. User clicks a thumbnails to flip through imagery, will need to select said thumbnails. 
 With node lists, we can select images with a forEach tag.
 2. Image content needs to change between clicks. We can do this by swapping target sources.
