@@ -2080,8 +2080,7 @@ input [ type=text ], select, textarea, #message
 {
 	margin-top: 25px;
 	margin-bottom: 25px;
-	margin: 0 auto;
-	width: 960px;
+	width: 100%;
 	height: auto;
 	color: #5d7032;
 }
@@ -2089,7 +2088,8 @@ input [ type=text ], select, textarea, #message
 #about1
 {
 	width: 960px;
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 	justify-content: center;
 	margin: 0 auto;
 }
@@ -2124,11 +2124,13 @@ input [ type=text ], select, textarea, #message
 #about2
 {
 	color: #5d7032;
-	display: flex;
 	width: 960px;
 	height: auto;
 	margin-top: 25px;
 	margin-bottom: 25px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
 	justify-content: center;
 }
 
@@ -2136,9 +2138,11 @@ input [ type=text ], select, textarea, #message
 {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: space-between;
 	margin-right: 20px;
 	width: 100%;
+	grid-row: 1/2;
+	grid-column: 2/2;
 }
 
 #about2TextCon 
@@ -2147,6 +2151,9 @@ input [ type=text ], select, textarea, #message
 	flex-direction: column;
 	margin-top: 10px;
 	margin-bottom: 20px; 
+	grid-row: 1/2;
+	grid-column: 1/2;
+	width: 100%;
 }
 
 #about2TextCon p 
@@ -2580,6 +2587,27 @@ input [ type=text ], select, textarea, #message
 	text-align: center;
 	font-size: 20px;
 	font-weight: normal;
+}
+
+#galleryCon
+{
+	width: 960px;
+	margin: 0 auto;
+	background-color: #cedcad; 
+}
+
+.main-img img,
+.galleryImgs img
+{
+	width: 100%;
+}
+
+
+.galleryImgs
+{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 5px;
 }
 
 /* Projects Page */

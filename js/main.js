@@ -9,9 +9,12 @@
 	var button = document.querySelector("#burger");
 	var burgerCon = document.querySelector("#burgerCon");
 	//variables for returning to top of page
-	var goTopBtn = document.querySelector('#return');
+	var goTopBtn = document.querySelector("#return");
 	//menu dropdown code
 	var accordion =  document.querySelectorAll(".toggle");
+	//gallery variables
+	const current = document.querySelector("#current");
+	const imgs = document.querySelectorAll(".galleryImgs img");
 
 
 
@@ -44,7 +47,6 @@
 
 	  }
 
-
 	//drop down menu for newsletters
 	function dropdown(e) {
 
@@ -55,7 +57,6 @@
 		e.currentTarget.nextElementSibling.classList.toggle('opened');
 	}
 
-	
 	//EVENT HANDLING
 
 	//menu event
