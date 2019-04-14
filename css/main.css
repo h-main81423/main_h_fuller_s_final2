@@ -1606,8 +1606,41 @@ input [ type=text ], select, textarea, #message
 		height: 150px;
 	}
 
-} /*end tablet query*/
+} /*end tablet query 1*/
 
+@media screen and (min-width: 768px){
+
+	#merchCon
+	{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+	}
+
+	#merchItems
+	{
+		display: flex;
+		flex-direction: row;
+	}
+
+	.merch
+	{
+		width: 200px;
+		height: 200px;
+		margin: 0 auto;
+	}
+
+	#merchText
+	{
+		font-size: 24px;
+		line-height: 30px;
+		color: #5d7032;
+		text-align: center;
+	}
+} /*End tablet query 2*/
+
+
+/*WEBN QUERIES*/
 @media screen and (min-width: 960px) {
 
 #siteContainer
@@ -2682,6 +2715,25 @@ input [ type=text ], select, textarea, #message
 	font-weight: normal;
 }
 
+	.merch
+	{
+		width: 300px;
+		height: 300px;
+		margin: 0 auto;
+	}
+
+	#merchText
+	{
+		width: 90%;
+		margin: 0 auto;
+		padding-top: 20px;
+		padding-bottom: 10px;
+		font-size: 24px;
+		line-height: 30px;
+		color: #5d7032;
+		text-align: center;
+	}
+
 .galleryCon
 {
 	width: 960px;
@@ -2741,6 +2793,7 @@ input [ type=text ], select, textarea, #message
 	opacity: 0;
 	animation: fadeIn 0.5s ease-in 1 forwards;
 }
+
 /* Projects Page */
 
 #subtitleP h3
