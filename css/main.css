@@ -2099,6 +2099,7 @@ input [ type=text ], select, textarea, #message
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	width: 100%;
 	margin-bottom: 20px;
 }
 
@@ -2117,6 +2118,7 @@ input [ type=text ], select, textarea, #message
 	padding-left: 10px; 
 	margin-bottom: 20px;
 	line-height: 35px;
+	width: 100%
 }
 	
 #about2
@@ -2127,6 +2129,7 @@ input [ type=text ], select, textarea, #message
 	height: auto;
 	margin-top: 25px;
 	margin-bottom: 25px;
+	justify-content: center;
 }
 
 .about2ImageCon 
@@ -2135,6 +2138,7 @@ input [ type=text ], select, textarea, #message
 	flex-direction: column;
 	justify-content: space-around;
 	margin-right: 20px;
+	width: 100%;
 }
 
 #about2TextCon 
@@ -2905,6 +2909,7 @@ input [ type=text ], select, textarea, #message
 #footerNav ul li 
 {
 	font-family: 'Noto Sans JP', sans-serif;
+	font-size: 14px;
 	text-align: center;
 	font-size: 16px;
 	color: #5d7032;
