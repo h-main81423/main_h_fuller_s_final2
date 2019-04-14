@@ -2,6 +2,10 @@
 
 ##Simon Fuller and Hayden Main 
 
+###HOW TO USE
+
+Just download the repo and check out the site!! We've worked hard so that these environmental anglers could have a good lookin platform for their brand. 
+
 ### DESCRIPTION OF PROJECT
 
 *The Thames River Anglers Association is a hands on environmental group who aids in the protection of the species within the Thames river in London Ontario and nearing Regions. Our task has been to redesign and reconstruct their website, as it was much needed.*
@@ -19,10 +23,9 @@ Needed resources:
 
 *We want to ensure that viewers of the website enjoy what they're seeing, but keep it professional. We are aware the demographic is going to likely be older people, so the typography of the site should be relatively large in order to encompass that accessibility to the right groups.*
 
-*It's not hard to see that the site views memberships and fundraising as very very *
-**BE CONSISTENT**
-*Blurbs to hold content*
-*Better organization*
+*It's not hard to see that the site views memberships and fundraising as very very important*
+
+*Green hues with white to stay with branding identity and compliment the logo*
 
 ### JavaScript Directions
 
@@ -46,6 +49,8 @@ Needed resources:
 4. Default behaviour should allow user to click again and close same container.
 
 ####image gallery
-1. User clicks a thumbnails to flip through imagery, will need to select said thumbnails.
-2. Image content needs to change between clicks, will need an array.
-3. User should be able to go back to previous images as well, so there should be two buttons to select. 
+1. User clicks a thumbnails to flip through imagery, will need to select said thumbnails. 
+With node lists, we can select images with a forEach tag.
+2. Image content needs to change between clicks. We can do this by swapping target sources.
+3. Once the target changes the image source based on that, we need something to signify it's active, so toggling a classlist on for stylizing will be beneficial. 
+4. Potentially add a fade in animation when swapping between images, again by toggling a class and creating the animation in CSS.

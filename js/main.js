@@ -13,10 +13,10 @@
 	//menu dropdown code
 	var accordion =  document.querySelectorAll(".toggle");
 	//gallery variables
-	const current = document.querySelector("#current");
+	const current = document.querySelector(".current");
 	const imgs = document.querySelectorAll(".galleryImgs img");
-
-
+	//variable to keep selected images opaque in the preview area
+	const opacity = 0.7;
 
 	//FUNCTIONS
 
@@ -51,17 +51,40 @@
 	function dropdown(e) {
 
 		console.log("dropdown menu called");
-
+		//add class list of clicked to 'e'
 		e.currentTarget.classList.toggle('clicked');
-
+		//pick the element next from the element selected and add a class list of opened to it
 		e.currentTarget.nextElementSibling.classList.toggle('opened');
 	}
+
+	//img function
+	function imgClick(e) {
+		//styling
+		//make the first image in the gallery thumbnail section selected
+		imgs[0].style.opacity = opacity;
+
+		//reset the opacity to prevent clicked image from remaining 'clicked'
+		imgs.forEach(img => img.style.opacity = 1);
+
+		//change the image source to the source of the clicked image
+		current.src = e.target.src;
+
+		//add the fade in class for animation, will run it once.
+		current.classList.add('fade-in');
+
+		//remove class after fade in animation so it will run more than once.
+		setTimeout(() => current.classList.remove('fade-in'), 500);
+
+		//change the opacity to opacity variable value by styling the target.
+		e.target.style.opacity = opacity;
+	}
+
+
 
 	//EVENT HANDLING
 
 	//menu event
 	button.addEventListener("click", menu, false);
-
 
 	//dropdown event
 	for(var i=0; i < accordion.length; i++) {
@@ -70,5 +93,9 @@
 
 	  window.addEventListener('scroll', returnToTop);
 	  goTopBtn.addEventListener('click', toStart);
+
+	//gallery event listeners
+	//clicking on thumbnails
+	imgs.forEach(img => img.addEventListener('click', imgClick));
 
 })();
